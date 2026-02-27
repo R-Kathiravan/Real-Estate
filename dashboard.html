@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Real Estate</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Space+Grotesk:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="sidebar-logo">
+                    <img src="./assets/Stackly-logo.webp" alt="Stackly LOGO">
+                </a>
+                <button class="sidebar-close" id="sidebarClose">
+                    <span class="material-icons">close</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <span class="nav-label">Main</span>
+                    <ul>
+                        <li class="active">
+                            <a href="dashboard.html">
+                                <span class="material-icons">dashboard</span>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="404page.html">
+                                <span class="material-icons">home</span>
+                                <span>My Properties</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="404page.html">
+                                <span class="material-icons">favorite</span>
+                                <span>Favorites</span>
+                                <span class="badge">3</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="404page.html">
+                                <span class="material-icons">message</span>
+                                <span>Messages</span>
+                                <span class="badge new">5</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <span class="nav-label">Management</span>
+                    <ul>
+                        <li>
+                            <a href="404page.html">
+                                <span class="material-icons">add_circle</span>
+                                <span>Add Property</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="404page.html">
+                                <span class="material-icons">people</span>
+                                <span>Leads</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="404page.html">
+                                <span class="material-icons">analytics</span>
+                                <span>Analytics</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <span class="nav-label">Settings</span>
+                    <ul>
+                        <li>
+                            <a href="404page.html">
+                                <span class="material-icons">person</span>
+                                <span>Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="404page.html">
+                                <span class="material-icons">settings</span>
+                                <span>Settings</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="404page.html">
+                                <span class="material-icons">logout</span>
+                                <span>Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle">
+                        <span class="material-icons">menu</span>
+                    </button>
+                    <a href="index.html" class="btn-primary">Back to Home</a>
+                </div>
+
+                <div class="header-right">
+                    <div class="header-actions">
+                        <button onclick="window.location.href='404page.html'" class="action-btn">
+                            <span class="material-icons">notifications</span>
+                            <span class="indicator"></span>
+                        </button>
+                        <button onclick="window.location.href='404page.html'" class="action-btn">
+                            <span class="material-icons">help</span>
+                        </button>
+                    </div>
+
+                    <div onclick="window.location.href='404page.html'" class="user-profile">
+                        <div class="user-info">
+                            <span class="user-name">John Doe</span>
+                            <span class="user-role">Property Owner</span>
+                        </div>
+                        <div class="user-avatar">
+                            <img src="./assets/review1.webp" alt="User">
+                            <span class="status online"></span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <div class="welcome-section">
+                    <div class="welcome-text">
+                        <h1>Welcome back, John! 👋</h1>
+                        <p>Here's what's happening with your properties today.</p>
+                    </div>
+                    <div class="welcome-actions">
+                        <a href="404page.html" class="btn-primary">
+                            <span class="material-icons">add</span>
+                            Add New Property
+                        </a>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon blue">
+                            <span class="material-icons">home</span>
+                        </div>
+                        <div class="stat-info">
+                            <h3>12</h3>
+                            <p>Total Properties</p>
+                        </div>
+                        <div class="stat-trend up">
+                            <span class="material-icons">trending_up</span>
+                            <span>+2 this month</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon green">
+                            <span class="material-icons">visibility</span>
+                        </div>
+                        <div class="stat-info">
+                            <h3>2,450</h3>
+                            <p>Total Views</p>
+                        </div>
+                        <div class="stat-trend up">
+                            <span class="material-icons">trending_up</span>
+                            <span>+15% this week</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon orange">
+                            <span class="material-icons">message</span>
+                        </div>
+                        <div class="stat-info">
+                            <h3>48</h3>
+                            <p>New Inquiries</p>
+                        </div>
+                        <div class="stat-trend up">
+                            <span class="material-icons">trending_up</span>
+                            <span>+8 this week</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon purple">
+                            <span class="material-icons">favorite</span>
+                        </div>
+                        <div class="stat-info">
+                            <h3>156</h3>
+                            <p>Saved by Users</p>
+                        </div>
+                        <div class="stat-trend down">
+                            <span class="material-icons">trending_down</span>
+                            <span>-3 this week</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="dashboard-section properties-section">
+                        <div class="section-header">
+                            <h2>My Properties</h2>
+                            <a href="404page.html" class="view-all">View All <span
+                                    class="material-icons">arrow_forward</span></a>
+                        </div>
+
+                        <div class="properties-list">
+                            <div class="property-row">
+                                <div class="property-thumb">
+                                    <img src="./assets/property1.webp" alt="Property">
+                                    <span class="status-badge active">Active</span>
+                                </div>
+                                <div class="property-details">
+                                    <h4>Luxury Villa in Bandra</h4>
+                                    <p><span class="material-icons">location_on</span> Mumbai, Maharashtra</p>
+                                    <div class="property-meta">
+                                        <span><span class="material-icons">bed</span> 4 Beds</span>
+                                        <span><span class="material-icons">bathtub</span> 3 Baths</span>
+                                        <span><span class="material-icons">square_foot</span> 2,500 sqft</span>
+                                    </div>
+                                </div>
+                                <div class="property-stats">
+                                    <div class="stat">
+                                        <span class="material-icons">visibility</span>
+                                        <span>1,234 views</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="material-icons">favorite</span>
+                                        <span>89 saves</span>
+                                    </div>
+                                </div>
+                                <div class="property-actions">
+                                    <button onclick="window.location.href='404page.html'" class="btn-icon" title="Edit">
+                                        <span class="material-icons">edit</span>
+                                    </button>
+                                    <button onclick="window.location.href='404page.html'" class="btn-icon"
+                                        title="Stats">
+                                        <span class="material-icons">bar_chart</span>
+                                    </button>
+                                    <button onclick="window.location.href='404page.html'" class="btn-icon danger"
+                                        title="Delete">
+                                        <span class="material-icons">delete</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="property-row">
+                                <div class="property-thumb">
+                                    <img src="./assets/property2.webp" alt="Property">
+                                    <span class="status-badge pending">Pending</span>
+                                </div>
+                                <div class="property-details">
+                                    <h4>Modern Apartment in Delhi</h4>
+                                    <p><span class="material-icons">location_on</span> New Delhi, Delhi</p>
+                                    <div class="property-meta">
+                                        <span><span class="material-icons">bed</span> 3 Beds</span>
+                                        <span><span class="material-icons">bathtub</span> 2 Baths</span>
+                                        <span><span class="material-icons">square_foot</span> 1,800 sqft</span>
+                                    </div>
+                                </div>
+                                <div class="property-stats">
+                                    <div class="stat">
+                                        <span class="material-icons">visibility</span>
+                                        <span>856 views</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="material-icons">favorite</span>
+                                        <span>45 saves</span>
+                                    </div>
+                                </div>
+                                <div class="property-actions">
+                                    <button onclick="window.location.href='404page.html'" class="btn-icon" title="Edit">
+                                        <span class="material-icons">edit</span>
+                                    </button>
+                                    <button onclick="window.location.href='404page.html'" class="btn-icon"
+                                        title="Stats">
+                                        <span class="material-icons">bar_chart</span>
+                                    </button>
+                                    <button onclick="window.location.href='404page.html'" class="btn-icon danger"
+                                        title="Delete">
+                                        <span class="material-icons">delete</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="property-row">
+                                <div class="property-thumb">
+                                    <img src="./assets/property3.webp" alt="Property">
+                                    <span class="status-badge sold">Sold</span>
+                                </div>
+                                <div class="property-details">
+                                    <h4>Spacious House in Bangalore</h4>
+                                    <p><span class="material-icons">location_on</span> Bangalore, Karnataka</p>
+                                    <div class="property-meta">
+                                        <span><span class="material-icons">bed</span> 5 Beds</span>
+                                        <span><span class="material-icons">bathtub</span> 4 Baths</span>
+                                        <span><span class="material-icons">square_foot</span> 3,200 sqft</span>
+                                    </div>
+                                </div>
+                                <div class="property-stats">
+                                    <div class="stat">
+                                        <span class="material-icons">visibility</span>
+                                        <span>2,100 views</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="material-icons">favorite</span>
+                                        <span>134 saves</span>
+                                    </div>
+                                </div>
+                                <div class="property-actions">
+                                    <button onclick="window.location.href='404page.html'" class="btn-icon" title="Edit">
+                                        <span class="material-icons">edit</span>
+                                    </button>
+                                    <button onclick="window.location.href='404page.html'" class="btn-icon"
+                                        title="Stats">
+                                        <span class="material-icons">bar_chart</span>
+                                    </button>
+                                    <button onclick="window.location.href='404page.html'" class="btn-icon danger"
+                                        title="Delete">
+                                        <span class="material-icons">delete</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="side-panel">
+                        <div class="dashboard-section activity-section">
+                            <div class="section-header">
+                                <h2>Recent Activity</h2>
+                            </div>
+                            <div class="activity-list">
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <span class="material-icons">visibility</span>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p>Your property <strong>Luxury Villa</strong> received 50 new views</p>
+                                        <span class="activity-time">2 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon message">
+                                        <span class="material-icons">message</span>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p>New inquiry from <strong>Rahul Sharma</strong></p>
+                                        <span class="activity-time">5 hours ago</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon favorite">
+                                        <span class="material-icons">favorite</span>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p><strong>Priya Patel</strong> saved your property</p>
+                                        <span class="activity-time">1 day ago</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <span class="material-icons">person_add</span>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p>New lead <strong>Amit Kumar</strong> contacted you</p>
+                                        <span class="activity-time">2 days ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-section chart-section">
+                            <div class="section-header">
+                                <h2>Performance</h2>
+                                <select class="chart-filter">
+                                    <option>Last 7 Days</option>
+                                    <option>Last 30 Days</option>
+                                    <option>Last 3 Months</option>
+                                </select>
+                            </div>
+                            <div class="chart-container">
+                                <div class="chart-bars">
+                                    <div class="bar" style="height: 40%;" data-value="450">
+                                        <span class="bar-label">Mon</span>
+                                    </div>
+                                    <div class="bar" style="height: 65%;" data-value="720">
+                                        <span class="bar-label">Tue</span>
+                                    </div>
+                                    <div class="bar" style="height: 50%;" data-value="560">
+                                        <span class="bar-label">Wed</span>
+                                    </div>
+                                    <div class="bar active" style="height: 85%;" data-value="950">
+                                        <span class="bar-label">Thu</span>
+                                    </div>
+                                    <div class="bar" style="height: 70%;" data-value="780">
+                                        <span class="bar-label">Fri</span>
+                                    </div>
+                                    <div class="bar" style="height: 55%;" data-value="610">
+                                        <span class="bar-label">Sat</span>
+                                    </div>
+                                    <div class="bar" style="height: 45%;" data-value="520">
+                                        <span class="bar-label">Sun</span>
+                                    </div>
+                                </div>
+                                <div class="chart-summary">
+                                    <div class="summary-item">
+                                        <span class="label">Total Views</span>
+                                        <span class="value">4,590</span>
+                                    </div>
+                                    <div class="summary-item">
+                                        <span class="label">Avg. Daily</span>
+                                        <span class="value">656</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-section tasks-section">
+                            <div class="section-header">
+                                <h2>Upcoming Tasks</h2>
+                                <a href="404page.html" class="add-task">
+                                    <span class="material-icons">add</span>
+                                </a>
+                            </div>
+                            <div class="tasks-list">
+                                <div class="task-item">
+                                    <div class="task-checkbox">
+                                        <input type="checkbox" id="task1">
+                                        <label for="task1"></label>
+                                    </div>
+                                    <div class="task-content">
+                                        <p>Follow up with Rahul Sharma</p>
+                                        <span class="task-time">Today, 3:00 PM</span>
+                                    </div>
+                                    <span class="task-priority high">High</span>
+                                </div>
+                                <div class="task-item">
+                                    <div class="task-checkbox">
+                                        <input type="checkbox" id="task2">
+                                        <label for="task2"></label>
+                                    </div>
+                                    <div class="task-content">
+                                        <p>Property photoshoot - Villa in Bandra</p>
+                                        <span class="task-time">Tomorrow, 10:00 AM</span>
+                                    </div>
+                                    <span class="task-priority medium">Medium</span>
+                                </div>
+                                <div class="task-item completed">
+                                    <div class="task-checkbox">
+                                        <input type="checkbox" id="task3" checked>
+                                        <label for="task3"></label>
+                                    </div>
+                                    <div class="task-content">
+                                        <p>Update property description</p>
+                                        <span class="task-time">Yesterday</span>
+                                    </div>
+                                    <span class="task-priority low">Done</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebarClose = document.getElementById('sidebarClose');
+
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.add('active');
+        });
+
+        sidebarClose.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768) {
+                if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
+                    sidebar.classList.remove('active');
+                }
+            }
+        });
+
+        document.querySelectorAll('.task-checkbox input').forEach(checkbox => {
+            checkbox.addEventListener('change', function () {
+                const taskItem = this.closest('.task-item');
+                if (this.checked) {
+                    taskItem.classList.add('completed');
+                } else {
+                    taskItem.classList.remove('completed');
+                }
+            });
+        });
+
+        document.querySelectorAll('.bar').forEach(bar => {
+            bar.addEventListener('mouseenter', function () {
+                const value = this.getAttribute('data-value');
+                this.style.setProperty('--tooltip-content', `"${value} views"`);
+            });
+        });
+    </script>
+</body>
+
+</html>
