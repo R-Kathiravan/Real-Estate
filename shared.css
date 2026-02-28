@@ -164,6 +164,7 @@ img {
     background-color: var(--primary-light);
     color: var(--primary-hover);
 }
+
 #header.is-fixed .head-btn a:hover {
     background-color: var(--primary-color);
     color: var(--primary-light);
@@ -202,13 +203,9 @@ img {
 }
 
 
-
-
-
-
-
-
-
+.mob-view {
+    display: none;
+}
 
 @media (max-width:768px) {
     .menu-items {
@@ -253,10 +250,7 @@ img {
     }
 
     .mob-view {
-        display: flex !important;
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
+        display: block !important;
     }
 }
 
@@ -290,6 +284,10 @@ header,
         display: block !important;
     }
 
+    .home-select {
+        top: 50px !important;
+    }
+
     .menu-items {
         position: fixed;
         inset: 0;
@@ -312,18 +310,18 @@ header,
     }
 
     .menu-items a {
-        color: #a7a7a7;
+        color: var(--text-body);
         font-size: 26px;
         font-weight: 600;
         text-decoration: none;
     }
 
     .menu-items .active {
-        color: var(--accent-gold);
+        color: var(--primary-color);
     }
 
     .menu-items a:hover {
-        color: var(--accent-gold);
+        color: var(--primary-hover);
     }
 
     .hamburger {
@@ -337,7 +335,6 @@ header,
         color: var(--primary-light);
         border-radius: 10px;
         font-weight: 800;
-
     }
 
     .head-btn {
@@ -350,6 +347,10 @@ header,
 
     .head-scroll-btn {
         display: none !important;
+    }
+
+    .head-btn a {
+        color: var(--primary-light);
     }
 }
 
@@ -752,5 +753,9 @@ html.lenis body {
 @media (max-width:768px) {
     .container {
         padding: 10px;
+    }
+
+    .head-hero {
+        padding-top: 60px;
     }
 }

@@ -26,19 +26,23 @@
                     <img src="./assets/stackly-logo.webp" alt="Stackly LOGO" class="logo">
                 </a>
                 <div class="menu-items" id="navMenu">
-                    <!-- <div class="home-nav"> -->
-                    <a href="index.html" class="home-btn  active">Home</a>
-                    <!-- <span class="material-icons dropdown-icon" id="homeDropdownBtn">
+                    <div class="home-nav active">
+                        <a href="index.html" class="home-btn">Home</a>
+                        <span class="material-icons dropdown-icon" id="homeDropdownBtn">
                             expand_more
                         </span>
                         <div class="home-select" id="homeDropdown">
                             <a href="../index.html" class="nav-link">Home Page 1</a>
-                        </div> -->
-                    <!-- </div> -->
+                        </div>
+                    </div>
                     <a href="about.html">About</a>
                     <a href="properties.html">Property</a>
                     <a href="contact.html">Contact</a>
                     <a href="dashboard.html">Dashboard</a>
+                    <div class="head-btn mob-view">
+                        <a href="login.html" class="btn-primary">Login <span class="material-icons">login</span>
+                        </a>
+                    </div>
                     <div class="close-btn material-icons" id="closeMenu">close</div>
                 </div>
                 <div class="head-btn">
@@ -934,7 +938,7 @@
 
             <div class="footer-bottom">
                 <p>&copy; 2026 Stackly Real Estate. All rights reserved.</p>
-                 <div class="social-links">
+                <div class="social-links">
                     <a href="404page.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="404page.html" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
                     <a href="404page.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -1082,7 +1086,20 @@
                 }, 1000);
             }
         });
+        const homeDropdownBtn = document.getElementById("homeDropdownBtn");
+        const homeDropdown = document.getElementById("homeDropdown");
+        const icon = document.querySelector(".dropdown-icon");
 
+        homeDropdownBtn.addEventListener("click", () => {
+            homeDropdown.classList.toggle("show");
+            icon.classList.toggle("rotate");
+        });
+        document.addEventListener("click", (e) => {
+            if (!homeDropdown.contains(e.target) && !homeDropdownBtn.contains(e.target)) {
+                homeDropdown.classList.remove("show");
+                icon.classList.remove("rotate");
+            }
+        });
     </script>
 </body>
 
