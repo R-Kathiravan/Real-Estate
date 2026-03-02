@@ -1887,6 +1887,9 @@
         transform: translateX(50%);
         bottom: -1rem;
     }
+    .newsletter-stats {
+        flex-wrap: wrap;
+    }
 }
 
 @media (max-width:768px) {
@@ -1909,5 +1912,12 @@
 
     .hero-container {
         grid-template-columns: 1fr;
+    }
+    .small-card-1, .small-card-2{
+        display: none;
+    }
+    .main-card{
+        left: 5px;
+        width: 100%;
     }
 }

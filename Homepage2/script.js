@@ -162,8 +162,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 statsObserver.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.5 });
-
+    }, {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    });
     const statsContainer = document.querySelector('.hero-stats');
     if (statsContainer) {
         statsObserver.observe(statsContainer);
