@@ -1,7 +1,3 @@
-/* ========================================
-   About Page Hero Section
-   ======================================== */
-
 .about-hero {
     position: relative;
     min-height: 60vh;
@@ -109,10 +105,6 @@
 .about-hero-breadcrumb span:last-child {
     color: var(--agency-accent);
 }
-
-/* ========================================
-   Our Story Section
-   ======================================== */
 
 .our-story {
     padding: 6rem 2rem;
@@ -252,10 +244,6 @@
     border-radius: var(--radius-lg);
 }
 
-/* ========================================
-   Statistics Section
-   ======================================== */
-
 .about-stats {
     padding: 5rem 2rem;
     background: var(--agency-primary);
@@ -306,10 +294,6 @@
     font-size: 0.9375rem;
     color: var(--text-light-muted);
 }
-
-/* ========================================
-   Mission & Vision Section
-   ======================================== */
 
 .mission-vision {
     padding: 6rem 2rem;
@@ -395,9 +379,6 @@
     color: var(--text-dark-body);
 }
 
-/* ========================================
-   Our Team Section
-   ======================================== */
 
 .our-team {
     padding: 6rem 2rem;
@@ -536,10 +517,6 @@
     line-height: 1.5;
 }
 
-/* ========================================
-   Why Choose Us Section
-   ======================================== */
-
 .why-choose-us {
     padding: 6rem 2rem;
     background: var(--agency-primary);
@@ -630,9 +607,6 @@
     color: var(--text-light-body);
 }
 
-/* ========================================
-   Awards Section
-   ======================================== */
 
 .awards-section {
     padding: 6rem 2rem;
@@ -718,9 +692,6 @@
     color: var(--text-dark-muted);
 }
 
-/* ========================================
-   Testimonials About Section
-   ======================================== */
 
 .testimonials-about {
     padding: 6rem 2rem;
@@ -832,9 +803,6 @@
     margin: 0;
 }
 
-/* ========================================
-   About CTA Section
-   ======================================== */
 
 .about-cta {
     position: relative;
@@ -936,10 +904,6 @@
     border-color: var(--agency-accent);
     color: var(--agency-accent);
 }
-
-/* ========================================
-   Responsive Styles for About Page
-   ======================================== */
 
 @media (max-width: 1200px) {
     .stats-grid {

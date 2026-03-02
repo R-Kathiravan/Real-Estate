@@ -1,12 +1,4 @@
-/* ========================================
-   Agency Header & Hero JavaScript
-   ======================================== */
-
 document.addEventListener('DOMContentLoaded', function () {
-
-    // ========================================
-    // Lenis Smooth Scroll Setup
-    // ========================================
     const lenis = new Lenis({
         duration: 1.2,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -23,9 +15,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     requestAnimationFrame(raf);
 
-    // ========================================
-    // Header Scroll Effect
-    // ========================================
     const header = document.getElementById('agencyHeader');
 
     function handleScroll() {
@@ -39,9 +28,6 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', handleScroll);
     handleScroll();
 
-    // ========================================
-    // Mobile Menu Toggle
-    // ========================================
     const hamburger = document.getElementById('hamburger');
     const agencyNav = document.getElementById('agencyNav');
     const mobileClose = document.getElementById('mobileClose');
@@ -75,9 +61,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // ========================================
-    // Hero Background Slideshow
-    // ========================================
     const heroSlides = document.querySelectorAll('.hero-bg-slide');
     let currentSlide = 0;
     let slideInterval;
@@ -109,12 +92,8 @@ document.addEventListener('DOMContentLoaded', function () {
         startSlideshow();
     }
 
-    // ========================================
-    // GSAP Animations
-    // ========================================
     gsap.registerPlugin(ScrollTrigger);
 
-    // Initial hero animations on load
     const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
     heroTl.from('.hero-badge', {
@@ -320,9 +299,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (propertyTabs.length > 0 && propertiesGrid) {
         propertyTabs.forEach(tab => {
             tab.addEventListener('click', function () {
-                // Remove active class from all tabs
                 propertyTabs.forEach(t => t.classList.remove('active'));
-                // Add active class to clicked tab
                 this.classList.add('active');
 
                 const tabValue = this.dataset.tab;
@@ -334,7 +311,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (tabValue === 'all') {
                         card.style.display = 'block';
                     } else if (tabValue === 'new') {
-                        // Show only "New" featured properties
                         const badges = card.querySelectorAll('.badge-featured');
                         let isNew = false;
                         badges.forEach(badge => {
@@ -363,14 +339,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (searchBtn) {
         searchBtn.addEventListener('click', function () {
-            // Get all filter values
             const searchValue = searchInput ? searchInput.value.toLowerCase() : '';
             const typeValue = propertyType ? propertyType.value : '';
             const priceValue = priceRange ? priceRange.value : '';
             const bedroomValue = bedrooms ? bedrooms.value : '';
             const bathroomValue = bathrooms ? bathrooms.value : '';
 
-            // Validation: At least one filter must be selected
             if (!searchValue && !typeValue && !priceValue && !bedroomValue && !bathroomValue) {
                 if (searchError) {
                     searchError.style.display = 'flex';
@@ -378,12 +352,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
 
-            // Hide error message if validation passes
             if (searchError) {
                 searchError.style.display = 'none';
             }
 
-            // Filter properties
             const propertyCards = propertiesGrid ? propertiesGrid.querySelectorAll('.property-card') : [];
 
             propertyCards.forEach(card => {
@@ -396,17 +368,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 let shouldShow = true;
 
-                // Search text filter
                 if (searchValue && !cardName.includes(searchValue) && !cardLocation.includes(searchValue)) {
                     shouldShow = false;
                 }
 
-                // Property type filter (simplified - just check if villa/apartment in name)
                 if (typeValue && !cardName.includes(typeValue)) {
                     shouldShow = false;
                 }
 
-                // Price range filter
                 if (priceValue) {
                     const priceParts = priceValue.split('-');
                     if (priceParts.length === 2) {
@@ -422,12 +391,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 }
 
-                // Bedrooms filter
                 if (bedroomValue && cardBedrooms < parseInt(bedroomValue)) {
                     shouldShow = false;
                 }
 
-                // Bathrooms filter
                 if (bathroomValue && cardBathrooms < parseInt(bathroomValue)) {
                     shouldShow = false;
                 }
@@ -435,16 +402,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 card.style.display = shouldShow ? 'block' : 'none';
             });
 
-            // Check if any properties are visible
             checkVisibleProperties();
 
-            // Reset to "All" tab
             propertyTabs.forEach(t => t.classList.remove('active'));
             const allTab = document.querySelector('[data-tab="all"]');
             if (allTab) allTab.classList.add('active');
         });
 
-        // Hide error when user starts typing
         if (searchInput) {
             searchInput.addEventListener('input', function () {
                 if (searchError) {
@@ -453,7 +417,6 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
 
-        // Hide error when any dropdown changes
         [propertyType, priceRange, bedrooms, bathrooms].forEach(dropdown => {
             if (dropdown) {
                 dropdown.addEventListener('change', function () {
@@ -465,7 +428,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Function to check visible properties and show/hide no results message
     function checkVisibleProperties() {
         const propertyCards = propertiesGrid ? propertiesGrid.querySelectorAll('.property-card') : [];
         let visibleCount = 0;
@@ -481,9 +443,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // ========================================
-    // Contact Form Validation
-    // ========================================
     const contactForm = document.getElementById('contactForm');
     const formSuccess = document.getElementById('formSuccess');
     const btnReset = document.getElementById('btnReset');
@@ -494,29 +453,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
             let isValid = true;
 
-            // Get form fields
             const firstName = document.getElementById('firstName');
             const lastName = document.getElementById('lastName');
             const email = document.getElementById('email');
             const subject = document.getElementById('subject');
             const message = document.getElementById('message');
 
-            // Reset previous errors
             clearFormErrors();
 
-            // Validate First Name
             if (!firstName.value.trim()) {
                 showFieldError('firstName', 'firstNameError');
                 isValid = false;
             }
 
-            // Validate Last Name
             if (!lastName.value.trim()) {
                 showFieldError('lastName', 'lastNameError');
                 isValid = false;
             }
 
-            // Validate Email
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!email.value.trim() || !emailRegex.test(email.value)) {
                 showFieldError('email', 'emailError');
@@ -581,14 +535,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const question = item.querySelector('.faq-question');
 
         question.addEventListener('click', function () {
-            // Close all other FAQs
             faqItems.forEach(otherItem => {
                 if (otherItem !== item) {
                     otherItem.classList.remove('active');
                 }
             });
 
-            // Toggle current FAQ
             item.classList.toggle('active');
         });
     });

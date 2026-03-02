@@ -1,4 +1,3 @@
- 
 .services-hero {
     position: relative;
     min-height: 60vh;
@@ -106,7 +105,7 @@
 .services-hero-breadcrumb span:last-child {
     color: var(--agency-accent);
 }
- 
+
 
 .main-services {
     padding: 6rem 2rem;
@@ -238,10 +237,6 @@
     font-size: 1.25rem;
 }
 
-/* ========================================
-   Why Choose Our Services Section
-   ======================================== */
-
 .why-services {
     padding: 6rem 2rem;
     background: var(--agency-primary);
@@ -331,10 +326,6 @@
     color: var(--text-light-body);
     margin: 0;
 }
-
-/* ========================================
-   Process Section
-   ======================================== */
 
 .service-process {
     padding: 6rem 2rem;
@@ -459,10 +450,6 @@
     color: var(--agency-accent);
     font-size: 1.5rem;
 }
-
-/* ========================================
-   Pricing Section
-   ======================================== */
 
 .pricing-section {
     padding: 6rem 2rem;
@@ -645,10 +632,6 @@
     color: var(--agency-primary);
 }
 
-/* ========================================
-   FAQ Section
-   ======================================== */
-
 .faq-section {
     padding: 6rem 2rem;
     background: var(--bg-light-primary);
@@ -735,10 +718,6 @@
     line-height: 1.7;
     padding-left: 2.5rem;
 }
-
-/* ========================================
-   Services CTA Section
-   ======================================== */
 
 .services-cta {
     position: relative;
@@ -841,10 +820,6 @@
     color: var(--agency-accent);
 }
 
-/* ========================================
-   Responsive Styles for Services Page
-   ======================================== */
-
 @media (max-width: 1200px) {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -883,6 +858,7 @@
 }
 
 @media (max-width: 768px) {
+
     .services-hero-title,
     .services-cta .cta-title {
         font-size: 2.5rem;
@@ -916,6 +892,7 @@
 }
 
 @media (max-width: 480px) {
+
     .services-hero-title,
     .services-cta .cta-title {
         font-size: 2rem;

@@ -503,10 +503,6 @@
     border-radius: var(--radius-lg);
 }
 
-/* ========================================
-   Featured Listings Section
-   ======================================== */
-
 .featured-listings {
     padding: 6rem 2rem;
     background: var(--bg-light-primary);
@@ -768,10 +764,6 @@
     transform: translateX(4px);
 }
 
-/* ========================================
-   Premium Services Section
-   ======================================== */
-
 .premium-services {
     padding: 6rem 2rem;
     background: var(--agency-primary);
@@ -878,10 +870,6 @@
     font-size: 1.25rem;
 }
 
-/* ========================================
-   Neighborhood Expertise Section
-   ======================================== */
-
 .neighborhood-expertise {
     padding: 6rem 2rem;
     background: var(--bg-light-secondary);
@@ -968,10 +956,6 @@
     font-size: 0.9375rem;
     color: var(--agency-accent);
 }
-
-/* ========================================
-   Elite Agents Section
-   ======================================== */
 
 .elite-agents {
     padding: 6rem 2rem;
@@ -1130,10 +1114,6 @@
 .agent-stats strong {
     color: var(--agency-accent);
 }
-
-/* ========================================
-   VIP CTA Section
-   ======================================== */
 
 .vip-cta {
     position: relative;
