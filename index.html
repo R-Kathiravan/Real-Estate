@@ -1036,56 +1036,102 @@
             }
         }
 
-        const contactForm = document.getElementById('contactForm');
+        const form = document.getElementById("contactForm");
 
-        contactForm.addEventListener('submit', function (e) {
-            if (!contactForm) return;
-            e.preventDefault();
+        if (form) {
+            const firstName = document.getElementById("firstName");
+            const lastName = document.getElementById("lastName");
+            const email = document.getElementById("email");
+            const phone = document.getElementById("phone");
+            const message = document.getElementById("message");
 
-            let isValid = true;
+            const nameRegex = /^[A-Za-z\s]{2,}$/;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const phoneRegex = /^[0-9]{10,15}$/;
 
-            const firstName = document.getElementById('firstName');
-            const lastName = document.getElementById('lastName');
-            const email = document.getElementById('email');
-            const message = document.getElementById('message');
-
-            if (firstName.value.trim() === '') {
-                setError(firstName, true);
-                isValid = false;
-            } else {
-                setError(firstName, false);
+            function showError(input) {
+                input.parentElement.classList.add("error");
             }
 
-            if (lastName.value.trim() === '') {
-                setError(lastName, true);
-                isValid = false;
-            } else {
-                setError(lastName, false);
+            function removeError(input) {
+                input.parentElement.classList.remove("error");
             }
 
-            if (!isValidEmail(email.value.trim())) {
-                setError(email, true);
-                isValid = false;
-            } else {
-                setError(email, false);
-            }
+            // 🔹 Real-time typing validation
+            firstName.addEventListener("input", () => {
+                firstName.value = firstName.value.replace(/[^A-Za-z\s]/g, "");
+                if (nameRegex.test(firstName.value.trim())) {
+                    removeError(firstName);
+                }
+            });
 
-            if (message.value.trim() === '') {
-                setError(message, true);
-                isValid = false;
-            } else {
-                setError(message, false);
-            }
+            lastName.addEventListener("input", () => {
+                lastName.value = lastName.value.replace(/[^A-Za-z\s]/g, "");
+                if (nameRegex.test(lastName.value.trim())) {
+                    removeError(lastName);
+                }
+            });
 
-            if (isValid) {
-                const btn = contactForm.querySelector('.btn-submit');
-                btn.innerHTML = 'Sending...';
+            phone.addEventListener("input", () => {
+                phone.value = phone.value.replace(/[^0-9]/g, "");
+                if (phone.value === "" || phoneRegex.test(phone.value)) {
+                    removeError(phone);
+                }
+            });
 
-                setTimeout(() => {
-                    window.location.href = '404page.html';
-                }, 1000);
-            }
-        });
+            email.addEventListener("input", () => {
+                if (emailRegex.test(email.value.trim())) {
+                    removeError(email);
+                }
+            });
+
+            message.addEventListener("input", () => {
+                if (message.value.trim() !== "") {
+                    removeError(message);
+                }
+            });
+
+            // 🔹 Submit Validation
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                let isValid = true;
+
+                if (!nameRegex.test(firstName.value.trim())) {
+                    showError(firstName);
+                    isValid = false;
+                }
+
+                if (!nameRegex.test(lastName.value.trim())) {
+                    showError(lastName);
+                    isValid = false;
+                }
+
+                if (!emailRegex.test(email.value.trim())) {
+                    showError(email);
+                    isValid = false;
+                }
+
+                if (phone.value !== "" && !phoneRegex.test(phone.value)) {
+                    showError(phone);
+                    isValid = false;
+                }
+
+                if (message.value.trim() === "") {
+                    showError(message);
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    const btn = form.querySelector(".btn-submit");
+                    btn.innerHTML = "Sending...";
+                    btn.disabled = true;
+
+                    setTimeout(() => {
+                        window.location.href = '404page.html';
+                    }, 1200);
+                }
+            });
+        }
         const homeDropdownBtn = document.getElementById("homeDropdownBtn");
         const homeDropdown = document.getElementById("homeDropdown");
         const icon = document.querySelector(".dropdown-icon");
