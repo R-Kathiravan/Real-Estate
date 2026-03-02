@@ -349,10 +349,7 @@
             }
 
             if (isValid) {
-                const btn = contactForm.querySelector('.btn-submit');
-                const originalText = btn.innerHTML;
-                btn.innerHTML = '<span>Message Sent!</span><span class="material-icons">check</span>';
-                btn.style.background = 'var(--status-available)';
+                window.location.href = '404page.html';
 
                 setTimeout(() => {
                     btn.innerHTML = originalText;

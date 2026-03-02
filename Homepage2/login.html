@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Stackly Premium Real Estate</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Space+Grotesk:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+</head>
+
+<body>
+    <div class="login-container">
+         <div class="login-left">
+            <div class="login-overlay"></div>
+            <div class="login-bg-image"></div>
+            <div class="login-content">
+                <a href="index.html" class="login-logo">
+                    <img src="./assets/stackly-logo.webp" alt="Stackly Logo">
+                </a>
+                <div class="login-text">
+                    <h1>Your Dream Home Awaits</h1>
+                    <p>Join thousands of satisfied clients who found their perfect property with Stackly. Access your
+                        personalized dashboard, saved properties, and exclusive listings.</p>
+                </div>
+                <div class="login-features">
+                    <div class="feature">
+                        <span class="material-icons">verified</span>
+                        <span>Verified Properties</span>
+                    </div>
+                    <div class="feature">
+                        <span class="material-icons">support_agent</span>
+                        <span>24/7 Support</span>
+                    </div>
+                    <div class="feature">
+                        <span class="material-icons">security</span>
+                        <span>Secure & Private</span>
+                    </div>
+                </div>
+                <div class="login-stats">
+                    <div class="stat">
+                        <h3>10K+</h3>
+                        <p>Properties Listed</p>
+                    </div>
+                    <div class="stat">
+                        <h3>5K+</h3>
+                        <p>Happy Clients</p>
+                    </div>
+                    <div class="stat">
+                        <h3>120+</h3>
+                        <p>Expert Agents</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="login-right">
+            <div class="login-form-container" id="loginContainer">
+                <a href="index.html" class="btn-back">
+                    <span class="material-icons">arrow_back</span>
+                    Back to Home
+                </a>
+                <div class="form-header">
+                    <h2>Welcome Back</h2>
+                    <p>Please enter your details to sign in.</p>
+                </div>
+
+                <form class="login-form" id="loginForm" novalidate>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <div class="input-wrapper">
+                            <span class="material-icons input-icon">email</span>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <span class="error-message">Please enter a valid email address</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="input-wrapper">
+                            <span class="material-icons input-icon">lock</span>
+                            <input type="password" id="password" name="password" placeholder="Enter your password"
+                                required>
+                            <button type="button" class="toggle-password" id="togglePassword">
+                                <span class="material-icons">visibility_off</span>
+                            </button>
+                        </div>
+                        <span class="error-message">Password is required</span>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox" id="remember">
+                            <span class="checkmark"></span>
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#" class="forgot-password" id="showForgotPassword">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="btn-login">
+                        <span>Sign In</span>
+                        <span class="material-icons">arrow_forward</span>
+                    </button>
+                </form>
+
+                <div class="divider">
+                    <span>Or continue with</span>
+                </div>
+
+                <div class="social-login">
+                    <button onclick="window.location.href='404page.html'" class="social-btn google">
+                        <img src="./assets/google-login.webp" alt="Google">
+                        <span>Google</span>
+                    </button>
+                    <button onclick="window.location.href='404page.html'" class="social-btn facebook">
+                        <img src="./assets/facebook-logo.webp" alt="Facebook">
+                        <span>Facebook</span>
+                    </button>
+                </div>
+
+                <div class="signup-link">
+                    <p>Don't have an account? <a href="404page.html" id="showSignup">Sign up for free</a></p>
+                </div>
+            </div>
+
+            <div class="login-form-container forgot-password-form" id="forgotPasswordContainer" style="display: none;">
+                <div class="back-to-login" id="backToLoginFromForgot">
+                    <span class="material-icons">arrow_back</span>
+                    <span>Back to Login</span>
+                </div>
+                <div class="form-header">
+                    <h2>Reset Password</h2>
+                    <p>Enter your email address and we'll send you a link to reset your password.</p>
+                </div>
+
+                <form class="login-form" id="forgotPasswordForm" novalidate>
+                    <div class="form-group">
+                        <label for="forgotEmail">Email Address</label>
+                        <div class="input-wrapper">
+                            <span class="material-icons input-icon">email</span>
+                            <input type="email" id="forgotEmail" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <span class="error-message">Please enter a valid email address</span>
+                    </div>
+
+                    <button type="submit" class="btn-login">
+                        <span>Send Reset Link</span>
+                        <span class="material-icons">send</span>
+                    </button>
+                </form>
+
+                <div class="help-text">
+                    <p>Remember your password? <a href="#" id="backToLoginLink">Sign in</a></p>
+                </div>
+            </div>
+
+            <div class="login-form-container signup-form" id="signupContainer" style="display: none;">
+                <div class="back-to-login" id="backToLoginFromSignup">
+                    <span class="material-icons">arrow_back</span>
+                    <span>Back to Login</span>
+                </div>
+                <div class="form-header">
+                    <h2>Create Account</h2>
+                    <p>Start your property journey with us today.</p>
+                </div>
+
+                <form class="login-form" id="registerForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <div class="input-wrapper">
+                                <span class="material-icons input-icon">person</span>
+                                <input type="text" id="firstName" name="firstName" placeholder="First name" required>
+                            </div>
+                            <span class="error-message">First name is required</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <div class="input-wrapper">
+                                <span class="material-icons input-icon">person</span>
+                                <input type="text" id="lastName" name="lastName" placeholder="Last name" required>
+                            </div>
+                            <span class="error-message">Last name is required</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signupEmail">Email Address</label>
+                        <div class="input-wrapper">
+                            <span class="material-icons input-icon">email</span>
+                            <input type="email" id="signupEmail" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <span class="error-message">Please enter a valid email address</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signupPassword">Password</label>
+                        <div class="input-wrapper">
+                            <span class="material-icons input-icon">lock</span>
+                            <input type="password" id="signupPassword" name="password" placeholder="Create password"
+                                required>
+                            <button type="button" class="toggle-password" id="toggleSignupPassword">
+                                <span class="material-icons">visibility_off</span>
+                            </button>
+                        </div>
+                        <span class="error-message">Password must be at least 8 characters</span>
+                        <div class="password-strength" id="passwordStrength">
+                            <div class="strength-bar"></div>
+                            <span class="strength-text">Password strength</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group terms-group">
+                        <div class="terms-wrapper">
+                            <input type="checkbox" id="terms" required>
+                            <label for="terms" class="terms-label">
+                                <span class="checkmark"></span>
+                                <span class="terms-text">I agree to the <a href="404page.html">Terms of Service</a> and
+                                    <a href="404page.html">Privacy Policy</a></span>
+                            </label>
+                        </div>
+                        <span class="error-message">You must agree to the terms</span>
+                    </div>
+
+                    <button type="submit" class="btn-login">
+                        <span>Create Account</span>
+                        <span class="material-icons">arrow_forward</span>
+                    </button>
+                </form>
+
+                <div class="divider">
+                    <span>Or sign up with</span>
+                </div>
+
+                <div class="social-login">
+                    <button onclick="window.location.href='404page.html'" class="social-btn google">
+                        <img src="./assets/google-login.webp" alt="Google">
+                        <span>Google</span>
+                    </button>
+                    <button onclick="window.location.href='404page.html'" class="social-btn facebook">
+                        <img src="./assets/facebook-logo.webp" alt="Facebook">
+                        <span>Facebook</span>
+                    </button>
+                </div>
+
+                <div class="signup-link">
+                    <p>Already have an account? <a href="#" id="showLoginFromSignup">Sign in</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordInput = document.getElementById('password');
+
+        if (togglePassword && passwordInput) {
+            togglePassword.addEventListener('click', () => {
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+                togglePassword.querySelector('.material-icons').textContent =
+                    type === 'password' ? 'visibility_off' : 'visibility';
+            });
+        }
+
+        const toggleSignupPassword = document.getElementById('toggleSignupPassword');
+        const signupPasswordInput = document.getElementById('signupPassword');
+
+        if (toggleSignupPassword && signupPasswordInput) {
+            toggleSignupPassword.addEventListener('click', () => {
+                const type = signupPasswordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                signupPasswordInput.setAttribute('type', type);
+                toggleSignupPassword.querySelector('.material-icons').textContent =
+                    type === 'password' ? 'visibility_off' : 'visibility';
+            });
+        }
+
+        const loginContainer = document.getElementById('loginContainer');
+        const signupContainer = document.getElementById('signupContainer');
+        const forgotPasswordContainer = document.getElementById('forgotPasswordContainer');
+
+        const showSignup = document.getElementById('showSignup');
+        const showLoginFromSignup = document.getElementById('showLoginFromSignup');
+        const backToLoginFromSignup = document.getElementById('backToLoginFromSignup');
+        const showForgotPassword = document.getElementById('showForgotPassword');
+        const backToLoginFromForgot = document.getElementById('backToLoginFromForgot');
+        const backToLoginLink = document.getElementById('backToLoginLink');
+
+        if (showSignup) {
+            showSignup.addEventListener('click', (e) => {
+                e.preventDefault();
+                loginContainer.style.display = 'none';
+                forgotPasswordContainer.style.display = 'none';
+                signupContainer.style.display = 'block';
+            });
+        }
+
+        if (showLoginFromSignup) {
+            showLoginFromSignup.addEventListener('click', (e) => {
+                e.preventDefault();
+                signupContainer.style.display = 'none';
+                loginContainer.style.display = 'block';
+            });
+        }
+
+        if (backToLoginFromSignup) {
+            backToLoginFromSignup.addEventListener('click', (e) => {
+                e.preventDefault();
+                signupContainer.style.display = 'none';
+                loginContainer.style.display = 'block';
+            });
+        }
+
+        if (showForgotPassword) {
+            showForgotPassword.addEventListener('click', (e) => {
+                e.preventDefault();
+                loginContainer.style.display = 'none';
+                forgotPasswordContainer.style.display = 'block';
+            });
+        }
+
+        if (backToLoginFromForgot) {
+            backToLoginFromForgot.addEventListener('click', (e) => {
+                e.preventDefault();
+                forgotPasswordContainer.style.display = 'none';
+                loginContainer.style.display = 'block';
+            });
+        }
+
+        if (backToLoginLink) {
+            backToLoginLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                forgotPasswordContainer.style.display = 'none';
+                loginContainer.style.display = 'block';
+            });
+        }
+
+        const loginForm = document.getElementById('loginForm');
+
+        if (loginForm) {
+            loginForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                let isValid = true;
+
+                const email = document.getElementById('email');
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email.value)) {
+                    email.closest('.form-group').classList.add('error');
+                    isValid = false;
+                } else {
+                    email.closest('.form-group').classList.remove('error');
+                }
+
+                const password = document.getElementById('password');
+                if (!password.value || password.value.length < 6) {
+                    password.closest('.form-group').classList.add('error');
+                    isValid = false;
+                } else {
+                    password.closest('.form-group').classList.remove('error');
+                }
+
+                if (isValid) {
+                    window.location.href = '404page.html';
+                }
+            });
+        }
+
+        const forgotPasswordForm = document.getElementById('forgotPasswordForm');
+
+        if (forgotPasswordForm) {
+            forgotPasswordForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                let isValid = true;
+
+                const forgotEmail = document.getElementById('forgotEmail');
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(forgotEmail.value)) {
+                    forgotEmail.closest('.form-group').classList.add('error');
+                    isValid = false;
+                } else {
+                    forgotEmail.closest('.form-group').classList.remove('error');
+                }
+
+                if (isValid) {
+                    window.location.href = '404page.html';
+                    forgotPasswordForm.reset();
+                    forgotPasswordContainer.style.display = 'none';
+                    loginContainer.style.display = 'block';
+                }
+            });
+        }
+
+        const registerForm = document.getElementById('registerForm');
+
+        if (registerForm) {
+            registerForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                let isValid = true;
+
+                const firstName = document.getElementById('firstName');
+                if (!firstName.value.trim()) {
+                    firstName.closest('.form-group').classList.add('error');
+                    isValid = false;
+                } else {
+                    firstName.closest('.form-group').classList.remove('error');
+                }
+
+                const lastName = document.getElementById('lastName');
+                if (!lastName.value.trim()) {
+                    lastName.closest('.form-group').classList.add('error');
+                    isValid = false;
+                } else {
+                    lastName.closest('.form-group').classList.remove('error');
+                }
+
+                const signupEmail = document.getElementById('signupEmail');
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(signupEmail.value)) {
+                    signupEmail.closest('.form-group').classList.add('error');
+                    isValid = false;
+                } else {
+                    signupEmail.closest('.form-group').classList.remove('error');
+                }
+
+                const signupPassword = document.getElementById('signupPassword');
+                if (!signupPassword.value || signupPassword.value.length < 8) {
+                    signupPassword.closest('.form-group').classList.add('error');
+                    isValid = false;
+                } else {
+                    signupPassword.closest('.form-group').classList.remove('error');
+                }
+
+                const terms = document.getElementById('terms');
+                if (!terms.checked) {
+                    terms.closest('.form-group').classList.add('error');
+                    isValid = false;
+                } else {
+                    terms.closest('.form-group').classList.remove('error');
+                }
+
+                if (isValid) {
+                    window.location.href = '404page.html';
+                }
+            });
+        }
+
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('input', function () {
+                this.closest('.form-group').classList.remove('error');
+            });
+        });
+
+        const signupPassword = document.getElementById('signupPassword');
+        const passwordStrength = document.getElementById('passwordStrength');
+
+        if (signupPassword && passwordStrength) {
+            const strengthBar = passwordStrength.querySelector('.strength-bar');
+            const strengthText = passwordStrength.querySelector('.strength-text');
+
+            signupPassword.addEventListener('input', () => {
+                const password = signupPassword.value;
+                let strength = 0;
+
+                if (password.length >= 8) strength++;
+                if (password.match(/[a-z]/) && password.match(/[A-Z]/)) strength++;
+                if (password.match(/[0-9]/)) strength++;
+                if (password.match(/[^a-zA-Z0-9]/)) strength++;
+
+                const colors = ['#EF4444', '#F59E0B', '#10B981', '#C5A880'];
+                const texts = ['Weak', 'Fair', 'Good', 'Strong'];
+
+                if (password.length > 0) {
+                    strengthBar.style.width = `${(strength / 4) * 100}%`;
+                    strengthBar.style.background = colors[strength - 1] || '#EF4444';
+                    strengthText.textContent = texts[strength - 1] || 'Too short';
+                    strengthText.style.color = colors[strength - 1] || '#EF4444';
+                    passwordStrength.style.display = 'block';
+                } else {
+                    strengthBar.style.width = '0';
+                    passwordStrength.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

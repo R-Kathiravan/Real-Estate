@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Stackly Premium Real Estate</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="service.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Space+Grotesk:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+</head>
+
+<body>
+
+    <header class="agency-header" id="agencyHeader">
+        <div class="header-container">
+            <a href="index.html" class="agency-logo">
+                <img src="./assets/stackly-logo.webp" alt="Stackly Logo">
+            </a>
+
+            <nav class="agency-nav" id="agencyNav">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="service.html" class="nav-link active">Services</a></li>
+                    <li class="nav-item"><a href="properties.html" class="nav-link">Properties</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <div class="header-actions mob-view">
+                        <a href="login.html" class="btn-login">
+                            <span class="material-icons">person</span>
+                            Login
+                        </a>
+                    </div>
+                </ul>
+                <div class="mobile-close" id="mobileClose">
+                    <span class="material-icons">close</span>
+                </div>
+            </nav>
+
+            <div class="header-actions">
+                <a href="login.html" class="btn-login">
+                    <span class="material-icons">person</span>
+                    Login
+                </a>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span class="material-icons">menu</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="services-hero">
+        <div class="services-hero-bg">
+            <img src="./assets/hero-bg.webp" alt="Luxury Real Estate">
+            <div class="services-hero-overlay"></div>
+        </div>
+        <div class="services-hero-content">
+            <div class="services-hero-badge">
+                <span class="material-icons">home_work</span>
+                Our Services
+            </div>
+            <h1 class="services-hero-title">Premium <span class="accent">Services</span></h1>
+            <p class="services-hero-desc">Comprehensive real estate solutions tailored to meet your every need. From
+                buying to selling, we deliver excellence in every transaction.</p>
+            <div class="services-hero-breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="material-icons">chevron_right</span>
+                <span>Services</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="main-services">
+        <div class="services-container">
+            <div class="services-header">
+                <div class="services-badge">What We Offer</div>
+                <h2 class="services-title">Our Real Estate Services</h2>
+                <p class="services-subtitle">End-to-end solutions for all your property needs</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <span class="material-icons">search</span>
+                    </div>
+                    <h3 class="service-name">Property Search</h3>
+                    <p class="service-desc">Find your dream property with our advanced AI-powered matching system that
+                        understands your preferences and lifestyle requirements.</p>
+                    <ul class="service-features">
+                        <li><span class="material-icons">check_circle</span> Personalized property recommendations</li>
+                        <li><span class="material-icons">check_circle</span> Virtual property tours</li>
+                        <li><span class="material-icons">check_circle</span> Neighborhood insights</li>
+                    </ul>
+                    <a href="404page.html" class="service-link">Learn More <span
+                            class="material-icons">arrow_forward</span></a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <span class="material-icons">sell</span>
+                    </div>
+                    <h3 class="service-name">Sell Your Property</h3>
+                    <p class="service-desc">Maximize your property's value with our expert marketing strategies and
+                        global reach to attract qualified buyers.</p>
+                    <ul class="service-features">
+                        <li><span class="material-icons">check_circle</span> Professional photography & staging</li>
+                        <li><span class="material-icons">check_circle</span> Multi-platform marketing</li>
+                        <li><span class="material-icons">check_circle</span> Negotiation expertise</li>
+                    </ul>
+                    <a href="404page.html" class="service-link">Learn More <span
+                            class="material-icons">arrow_forward</span></a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <span class="material-icons">key</span>
+                    </div>
+                    <h3 class="service-name">Rental Solutions</h3>
+                    <p class="service-desc">Find the perfect rental property or list your property for rent with
+                        flexible terms and premium amenities.</p>
+                    <ul class="service-features">
+                        <li><span class="material-icons">check_circle</span> Wide rental portfolio</li>
+                        <li><span class="material-icons">check_circle</span> Tenant screening services</li>
+                        <li><span class="material-icons">check_circle</span> Lease management</li>
+                    </ul>
+                    <a href="404page.html" class="service-link">Learn More <span
+                            class="material-icons">arrow_forward</span></a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <span class="material-icons">account_balance</span>
+                    </div>
+                    <h3 class="service-name">Property Management</h3>
+                    <p class="service-desc">Full-service property management to maximize your investment returns with
+                        hassle-free landlord experience.</p>
+                    <ul class="service-features">
+                        <li><span class="material-icons">check_circle</span> Tenant management</li>
+                        <li><span class="material-icons">check_circle</span> Maintenance & repairs</li>
+                        <li><span class="material-icons">check_circle</span> Financial reporting</li>
+                    </ul>
+                    <a href="404page.html" class="service-link">Learn More <span
+                            class="material-icons">arrow_forward</span></a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <span class="material-icons">gavel</span>
+                    </div>
+                    <h3 class="service-name">Legal Assistance</h3>
+                    <p class="service-desc">Expert legal support to ensure smooth transactions and peace of mind
+                        throughout your real estate journey.</p>
+                    <ul class="service-features">
+                        <li><span class="material-icons">check_circle</span> Contract review</li>
+                        <li><span class="material-icons">check_circle</span> Title search & insurance</li>
+                        <li><span class="material-icons">check_circle</span> Closing assistance</li>
+                    </ul>
+                    <a href="404page.html" class="service-link">Learn More <span
+                            class="material-icons">arrow_forward</span></a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <span class="material-icons">trending_up</span>
+                    </div>
+                    <h3 class="service-name">Investment Advisory</h3>
+                    <p class="service-desc">Strategic investment opportunities with high ROI potential in premium
+                        markets worldwide.</p>
+                    <ul class="service-features">
+                        <li><span class="material-icons">check_circle</span> Market analysis</li>
+                        <li><span class="material-icons">check_circle</span> Portfolio diversification</li>
+                        <li><span class="material-icons">check_circle</span> Risk assessment</li>
+                    </ul>
+                    <a href="404page.html" class="service-link">Learn More <span
+                            class="material-icons">arrow_forward</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-services">
+        <div class="why-services-container">
+            <div class="why-services-content">
+                <div class="why-services-badge">Why Choose Us</div>
+                <h2 class="why-services-title">Excellence in Every Service</h2>
+                <p class="why-services-desc">We pride ourselves on delivering unmatched quality across all our services,
+                    ensuring your complete satisfaction from start to finish.</p>
+            </div>
+            <div class="why-services-grid">
+                <div class="why-service-item">
+                    <div class="why-service-icon">
+                        <span class="material-icons">verified_user</span>
+                    </div>
+                    <h3>Trusted Expertise</h3>
+                    <p>15+ years of industry experience with certified professionals</p>
+                </div>
+                <div class="why-service-item">
+                    <div class="why-service-icon">
+                        <span class="material-icons">speed</span>
+                    </div>
+                    <h3>Fast Processing</h3>
+                    <p>Streamlined processes that save you time and effort</p>
+                </div>
+                <div class="why-service-item">
+                    <div class="why-service-icon">
+                        <span class="material-icons">support_agent</span>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Dedicated team available around the clock</p>
+                </div>
+                <div class="why-service-item">
+                    <div class="why-service-icon">
+                        <span class="material-icons">security</span>
+                    </div>
+                    <h3>Secure Transactions</h3>
+                    <p>Protected deals with verified processes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-process">
+        <div class="process-container">
+            <div class="process-header">
+                <div class="process-badge">How It Works</div>
+                <h2 class="process-title">Our Simple Process</h2>
+                <p class="process-subtitle">Four easy steps to your perfect property</p>
+            </div>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">
+                        <span class="material-icons">phone</span>
+                    </div>
+                    <h3>Consultation</h3>
+                    <p>Schedule a free consultation to discuss your needs and preferences with our experts.</p>
+                </div>
+
+                <div class="process-connector">
+                    <span class="material-icons">arrow_forward</span>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">
+                        <span class="material-icons">search</span>
+                    </div>
+                    <h3>Property Search</h3>
+                    <p>We match you with properties that fit your criteria and schedule viewings.</p>
+                </div>
+
+                <div class="process-connector">
+                    <span class="material-icons">arrow_forward</span>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">
+                        <span class="material-icons">description</span>
+                    </div>
+                    <h3>Documentation</h3>
+                    <p>Our team handles all paperwork and legal requirements for a smooth transaction.</p>
+                </div>
+
+                <div class="process-connector">
+                    <span class="material-icons">arrow_forward</span>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-icon">
+                        <span class="material-icons">celebration</span>
+                    </div>
+                    <h3>Move In</h3>
+                    <p>Complete the transaction and get the keys to your new home!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-section">
+        <div class="pricing-container">
+            <div class="pricing-header">
+                <div class="pricing-badge">Pricing Plans</div>
+                <h2 class="pricing-title">Flexible Service Packages</h2>
+                <p class="pricing-subtitle">Choose the plan that fits your needs</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header-card">
+                        <h3>Basic</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">499</span>
+                            <span class="period">/transaction</span>
+                        </div>
+                        <p>Perfect for simple transactions</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="material-icons">check</span> Property search assistance</li>
+                        <li><span class="material-icons">check</span> 5 property viewings</li>
+                        <li><span class="material-icons">check</span> Basic negotiation support</li>
+                        <li><span class="material-icons">check</span> Email support</li>
+                        <li class="disabled"><span class="material-icons">close</span> Legal consultation</li>
+                        <li class="disabled"><span class="material-icons">close</span> Investment advisory</li>
+                    </ul>
+                    <a href="404page.html" class="pricing-btn">Get Started</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="featured-badge">Most Popular</div>
+                    <div class="pricing-header-card">
+                        <h3>Professional</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">999</span>
+                            <span class="period">/transaction</span>
+                        </div>
+                        <p>Ideal for most buyers and sellers</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="material-icons">check</span> Unlimited property search</li>
+                        <li><span class="material-icons">check</span> Unlimited viewings</li>
+                        <li><span class="material-icons">check</span> Expert negotiation</li>
+                        <li><span class="material-icons">check</span> Priority support</li>
+                        <li><span class="material-icons">check</span> Legal consultation</li>
+                        <li class="disabled"><span class="material-icons">close</span> Investment advisory</li>
+                    </ul>
+                    <a href="404page.html" class="pricing-btn">Get Started</a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header-card">
+                        <h3>Premium</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">2499</span>
+                            <span class="period">/transaction</span>
+                        </div>
+                        <p>Complete luxury experience</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="material-icons">check</span> Unlimited property search</li>
+                        <li><span class="material-icons">check</span> Unlimited viewings</li>
+                        <li><span class="material-icons">check</span> Expert negotiation</li>
+                        <li><span class="material-icons">check</span> 24/7 VIP support</li>
+                        <li><span class="material-icons">check</span> Full legal consultation</li>
+                        <li><span class="material-icons">check</span> Investment advisory</li>
+                    </ul>
+                    <a href="404page.html" class="pricing-btn">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="faq-container">
+            <div class="faq-header">
+                <div class="faq-badge">FAQ</div>
+                <h2 class="faq-title">Frequently Asked Questions</h2>
+                <p class="faq-subtitle">Find answers to common questions about our services</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="material-icons">help_outline</span>
+                        <h3>How long does the property buying process take?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The timeline varies depending on the complexity of the transaction. Typically, it takes 30-60
+                            days from offer acceptance to closing. Our team will guide you through each step.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="material-icons">help_outline</span>
+                        <h3>What documents do I need to sell my property?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Common documents include property deed, tax records, insurance policies, and any warranties.
+                            Our legal team will provide a complete checklist tailored to your situation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="material-icons">help_outline</span>
+                        <h3>Do you offer virtual property tours?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We offer 3D virtual tours, video walkthroughs, and live virtual consultations for all
+                            our properties, so you can explore options from anywhere in the world.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="material-icons">help_outline</span>
+                        <h3>What are your agent commission rates?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our commission rates vary based on the service package you choose. We offer flexible options
+                            to fit different budgets, and all fees are discussed upfront with no hidden costs.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="material-icons">help_outline</span>
+                        <h3>Can you help with investment properties?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! Our investment advisory team specializes in identifying high-ROI opportunities,
+                            providing market analysis, and helping you build a profitable real estate portfolio.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="material-icons">help_outline</span>
+                        <h3>Do you offer property management services?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we provide comprehensive property management services including tenant screening, rent
+                            collection, maintenance, and financial reporting for both residential and commercial
+                            properties.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-cta">
+        <div class="cta-bg">
+            <img src="./assets/hero2.webp" alt="Luxury Home">
+            <div class="cta-overlay"></div>
+        </div>
+        <div class="cta-content">
+            <h2 class="cta-title">Ready to Get Started?</h2>
+            <p class="cta-desc">Contact us today for a free consultation and let us help you find your perfect property
+                or sell your home for the best price.</p>
+            <div class="cta-buttons">
+                <a href="404page.html" class="btn-cta-primary">Contact Us</a>
+                <a href="404page.html" class="btn-cta-secondary">View Properties</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter-section">
+        <div class="newsletter-bg">
+            <img src="./assets/hero3.webp" alt="Luxury Interior">
+            <div class="newsletter-overlay"></div>
+        </div>
+        <div class="newsletter-content">
+            <div class="newsletter-badge">Stay Updated</div>
+            <h2 class="newsletter-title">Get the Latest Luxury Listings</h2>
+            <p class="newsletter-desc">Subscribe to our newsletter and be the first to know about exclusive properties,
+                market insights, and special offers.</p>
+
+            <form class="newsletter-form">
+                <div class="newsletter-input-group">
+                    <span class="material-icons">email</span>
+                    <input type="email" placeholder="Enter your email address" required>
+                </div>
+                <button type="submit" class="newsletter-btn">
+                    Subscribe Now
+                    <span class="material-icons">arrow_forward</span>
+                </button>
+            </form>
+
+            <p class="newsletter-privacy">
+                <span class="material-icons">lock</span>
+                We respect your privacy. Unsubscribe at any time.
+            </p>
+
+            <div class="newsletter-stats">
+                <div class="newsletter-stat">
+                    <span class="stat-num">25K+</span>
+                    <span class="stat-label">Subscribers</span>
+                </div>
+                <div class="newsletter-stat">
+                    <span class="stat-num">500+</span>
+                    <span class="stat-label">Properties Weekly</span>
+                </div>
+                <div class="newsletter-stat">
+                    <span class="stat-num">100%</span>
+                    <span class="stat-label">Privacy Protected</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="footer-container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="index.html" class="footer-logo">
+                            <img src="./assets/stackly-logo.webp" alt="Stackly Logo">
+                        </a>
+                        <p class="footer-desc">Your trusted partner in finding the perfect luxury home. Experience
+                            premium real estate services with personalized attention.</p>
+                        <div class="footer-social">
+                            <a href="404page.html"><i class="fab fa-facebook-f"></i></a>
+                            <a href="404page.html"><i class="fab fa-twitter"></i></a>
+                            <a href="404page.html"><i class="fab fa-instagram"></i></a>
+                            <a href="404page.html"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="properties.html">About</a></li>
+                            <li><a href="service.html">Services</a></li>
+                            <li><a href="properties.html">Properties</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="404page.html">About Us</a></li>
+                            <li><a href="404page.html">Careers</a></li>
+                            <li><a href="404page.html">Blog</a></li>
+                            <li><a href="404page.html">Press</a></li>
+                            <li><a href="404page.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="404page.html">Property Management</a></li>
+                            <li><a href="404page.html">Legal Assistance</a></li>
+                            <li><a href="404page.html">Investment Advisory</a></li>
+                            <li><a href="404page.html">VIP Program</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-contact">
+                        <h3>Contact Us</h3>
+                        <div class="contact-item">
+                            <span class="material-icons">location_on</span>
+                            <span>Salem, Tamil Nadu</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="material-icons">phone</span>
+                            <span>+91 9876543210</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="material-icons">email</span>
+                            <span>info@thestackly.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2026 Real Estate. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="404page.html">Privacy Policy</a>
+                    <a href="404page.html">Terms of Service</a>
+                    <a href="404page.html">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

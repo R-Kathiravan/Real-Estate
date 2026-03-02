@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Stackly Premium Real Estate</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Space+Grotesk:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+</head>
+
+<body>
+
+    <header class="agency-header" id="agencyHeader">
+        <div class="header-container">
+            <a href="index.html" class="agency-logo">
+                <img src="./assets/stackly-logo.webp" alt="Stackly Logo">
+            </a>
+
+            <nav class="agency-nav" id="agencyNav">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="service.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="properties.html" class="nav-link">Properties</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+                    <div class="header-actions mob-view">
+                        <a href="login.html" class="btn-login">
+                            <span class="material-icons">person</span>
+                            Login
+                        </a>
+                    </div>
+                </ul>
+                <div class="mobile-close" id="mobileClose">
+                    <span class="material-icons">close</span>
+                </div>
+            </nav>
+
+            <div class="header-actions">
+                <a href="login.html" class="btn-login">
+                    <span class="material-icons">person</span>
+                    Login
+                </a>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span class="material-icons">menu</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="contact-hero">
+        <div class="contact-hero-bg">
+            <img src="./assets/hero-bg.webp" alt="Contact Us">
+            <div class="contact-hero-overlay"></div>
+        </div>
+        <div class="contact-hero-content">
+            <div class="contact-hero-badge">
+                <span class="material-icons">headset_mic</span>
+                Get In Touch
+            </div>
+            <h1 class="contact-hero-title">Contact <span class="accent">Us</span></h1>
+            <p class="contact-hero-desc">Have questions about buying, selling, or renting? Our expert team is here to
+                help you find your perfect property solution.</p>
+            <div class="contact-hero-breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="material-icons">chevron_right</span>
+                <span>Contact</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-info-section">
+        <div class="contact-info-container">
+            <div class="contact-info-grid">
+                <div class="contact-info-card">
+                    <div class="contact-info-icon">
+                        <span class="material-icons">phone</span>
+                    </div>
+                    <div class="contact-info-content">
+                        <h3>Phone</h3>
+                        <p>+91 9876543210</p>
+                        <p>+91 923456780</p>
+                    </div>
+                </div>
+                <div class="contact-info-card">
+                    <div class="contact-info-icon">
+                        <span class="material-icons">email</span>
+                    </div>
+                    <div class="contact-info-content">
+                        <h3>Email</h3>
+                        <p>info@thestackly.com</p>
+                        <p>support@thestackly.com</p>
+                    </div>
+                </div>
+                <div class="contact-info-card">
+                    <div class="contact-info-icon">
+                        <span class="material-icons">location_on</span>
+                    </div>
+                    <div class="contact-info-content">
+                        <h3>Office</h3>
+                        <p>Stackly Phae1</p>
+                        <p>Salem, TN</p>
+                    </div>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="contact-info-icon">
+                        <span class="material-icons">schedule</span>
+                    </div>
+                    <div class="contact-info-content">
+                        <h3>Working Hours</h3>
+                        <p>Mon - Fri: 9AM - 7PM</p>
+                        <p>Sat - Sun: 10AM - 5PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-form-section">
+        <div class="contact-form-container">
+            <div class="contact-form-wrapper">
+                <div class="contact-form-header">
+                    <div class="contact-form-badge">Send Us a Message</div>
+                    <h2 class="contact-form-title">We'd Love to Hear From You</h2>
+                    <p class="contact-form-desc">Fill out the form below and our team will get back to you within 24
+                        hours.</p>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="John" required>
+                            <span class="form-error" id="firstNameError">Please enter your first name</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
+                            <span class="form-error" id="lastNameError">Please enter your last name</span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            <span class="form-error" id="emailError">Please enter a valid email address</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="buy">Buying a Property</option>
+                            <option value="sell">Selling a Property</option>
+                            <option value="rent">Renting a Property</option>
+                            <option value="invest">Investment Inquiry</option>
+                            <option value="general">General Inquiry</option>
+                        </select>
+                        <span class="form-error" id="subjectError">Please select a subject</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your requirements..."
+                            required></textarea>
+                        <span class="form-error" id="messageError">Please enter your message</span>
+                    </div>
+
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Subscribe to our newsletter for property updates and exclusive
+                            listings</label>
+                    </div>
+
+                    <button type="submit" class="contact-submit-btn">
+                        <span class="material-icons">send</span>
+                        Send Message
+                    </button>
+                </form>
+
+                <div class="form-success" id="formSuccess" style="display: none;">
+                    <span class="material-icons">check_circle</span>
+                    <h3>Message Sent Successfully!</h3>
+                    <p>Thank you for contacting us. Our team will get back to you within 24 hours.</p>
+                    <button class="btn-reset" id="btnReset">Send Another Message</button>
+                </div>
+            </div>
+
+            <div class="contact-map-wrapper">
+                <div class="map-header">
+                    <h2 class="map-title">Find Our Office</h2>
+                    <p class="map-desc">Visit us at our headquarters in Beverly Hills</p>
+                </div>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3907.1616098770783!2d78.17140487459903!3d11.68295658852636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babefef7fd970bb%3A0xe11aef1a71994f9!2sStackly!5e0!3m2!1sen!2sin!4v1771822523831!5m2!1sen!2sin"
+                        style="border:0;" allowfullscreen="" loading="lazy" width="100%" height="450"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </iframe>
+                </div>
+
+                <div class="quick-contact">
+                    <h3>Other Ways to Connect</h3>
+                    <div class="quick-contact-icons">
+                        <a href="404page.html" class="quick-contact-btn" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="404page.html" class="quick-contact-btn" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="404page.html" class="quick-contact-btn" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="404page.html" class="quick-contact-btn" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="404page.html" class="quick-contact-btn" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-faq-section">
+        <div class="faq-container">
+            <div class="faq-header">
+                <div class="faq-badge">FAQ</div>
+                <h2 class="faq-title">Frequently Asked Questions</h2>
+                <p class="faq-desc">Quick answers to common questions about our services</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What are your office hours?</span>
+                        <span class="material-icons">add</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our offices are open Monday through Friday from 9AM to 7PM, and Saturday through Sunday from
+                            10AM to 5PM. We're happy to schedule appointments outside these hours based on your
+                            convenience.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How quickly do you respond to inquiries?</span>
+                        <span class="material-icons">add</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We aim to respond to all inquiries within 24 hours. For urgent matters, please call us
+                            directly at +1 (555) 123-4567.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do you offer virtual consultations?</span>
+                        <span class="material-icons">add</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We offer virtual consultations via video call or phone for clients who cannot visit our
+                            office in person. Simply indicate your preference when submitting the contact form.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What areas do you serve?</span>
+                        <span class="material-icons">add</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We primarily serve the Greater Los Angeles area including Beverly Hills, Malibu, Santa
+                            Monica, and surrounding neighborhoods. Contact us to discuss your specific location
+                            requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-cta">
+        <div class="cta-bg">
+            <img src="./assets/hero1.webp" alt="Luxury Home">
+            <div class="cta-overlay"></div>
+        </div>
+        <div class="cta-content">
+            <h2 class="cta-title">Ready to Find Your Dream Home?</h2>
+            <p class="cta-desc">Let our expert agents guide you through the process of finding the perfect property.
+                Start your journey today.</p>
+            <div class="cta-buttons">
+                <a href="properties.html" class="btn-cta-primary">Browse Properties</a>
+                <a href="404page.html" class="btn-cta-secondary">Schedule a Visit</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter-section">
+        <div class="newsletter-bg">
+            <img src="./assets/hero3.webp" alt="Luxury Interior">
+            <div class="newsletter-overlay"></div>
+        </div>
+        <div class="newsletter-content">
+            <div class="newsletter-badge">Stay Updated</div>
+            <h2 class="newsletter-title">Get the Latest Luxury Listings</h2>
+            <p class="newsletter-desc">Subscribe to our newsletter and be the first to know about exclusive properties,
+                market insights, and special offers.</p>
+
+            <form class="newsletter-form">
+                <div class="newsletter-input-group">
+                    <span class="material-icons">email</span>
+                    <input type="email" placeholder="Enter your email address" required>
+                </div>
+                <button type="submit" class="newsletter-btn">
+                    Subscribe Now
+                    <span class="material-icons">arrow_forward</span>
+                </button>
+            </form>
+
+            <p class="newsletter-privacy">
+                <span class="material-icons">lock</span>
+                We respect your privacy. Unsubscribe at any time.
+            </p>
+
+            <div class="newsletter-stats">
+                <div class="newsletter-stat">
+                    <span class="stat-num">25K+</span>
+                    <span class="stat-label">Subscribers</span>
+                </div>
+                <div class="newsletter-stat">
+                    <span class="stat-num">500+</span>
+                    <span class="stat-label">Properties Weekly</span>
+                </div>
+                <div class="newsletter-stat">
+                    <span class="stat-num">100%</span>
+                    <span class="stat-label">Privacy Protected</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="footer-container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="index.html" class="footer-logo">
+                            <img src="./assets/stackly-logo.webp" alt="Stackly Logo">
+                        </a>
+                        <p class="footer-desc">Your trusted partner in finding the perfect luxury home. Experience
+                            premium real estate services with personalized attention.</p>
+                        <div class="footer-social">
+                            <a href="404page.html"><i class="fab fa-facebook-f"></i></a>
+                            <a href="404page.html"><i class="fab fa-twitter"></i></a>
+                            <a href="404page.html"><i class="fab fa-instagram"></i></a>
+                            <a href="404page.html"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="properties.html">About</a></li>
+                            <li><a href="service.html">Services</a></li>
+                            <li><a href="properties.html">Properties</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="404page.html">About Us</a></li>
+                            <li><a href="404page.html">Careers</a></li>
+                            <li><a href="404page.html">Blog</a></li>
+                            <li><a href="404page.html">Press</a></li>
+                            <li><a href="404page.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="404page.html">Property Management</a></li>
+                            <li><a href="404page.html">Legal Assistance</a></li>
+                            <li><a href="404page.html">Investment Advisory</a></li>
+                            <li><a href="404page.html">VIP Program</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-contact">
+                        <h3>Contact Us</h3>
+                        <div class="contact-item">
+                            <span class="material-icons">location_on</span>
+                            <span>Salem, Tamil Nadu</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="material-icons">phone</span>
+                            <span>+91 9876543210</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="material-icons">email</span>
+                            <span>info@thestackly.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2026 Real Estate. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="404page.html">Privacy Policy</a>
+                    <a href="404page.html">Terms of Service</a>
+                    <a href="404page.html">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

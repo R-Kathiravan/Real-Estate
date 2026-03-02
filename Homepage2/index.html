@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly - Premium Real Estate Agency</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Space+Grotesk:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+</head>
+
+<body>
+
+    <header class="agency-header" id="agencyHeader">
+        <div class="header-container">
+            <a href="index.html" class="agency-logo">
+                <img src="./assets/stackly-logo.webp" alt="Stackly Logo">
+            </a>
+
+            <nav class="agency-nav" id="agencyNav">
+                <ul class="nav-menu">
+                    <div class="home-nav">
+                        <li class="nav-item"> <a href="index.html" class="home-btn nav-link active">Home</a></li>
+                        <span class="material-icons dropdown-icon" id="homeDropdownBtn">
+                            expand_more
+                        </span>
+                        <div class="home-select" id="homeDropdown">
+                            <li class="nav-item"> <a href="./Homepage2/index.html" class="nav-link">Home Page 2</a></li>
+                        </div>
+                    </div>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="service.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="properties.html" class="nav-link">Properties</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <div class="header-actions mob-view">
+                        <a href="login.html" class="btn-login">
+                            <span class="material-icons">person</span>
+                            Login
+                        </a>
+                    </div>
+                </ul>
+                <div class="mobile-close" id="mobileClose">
+                    <span class="material-icons">close</span>
+                </div>
+            </nav>
+
+            <div class="header-actions">
+                <a href="login.html" class="btn-login">
+                    <span class="material-icons">person</span>
+                    Login
+                </a>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span class="material-icons">menu</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-bg-container">
+            <div class="hero-bg-slide active" style="background-image: url('./assets/hero1.webp');">
+            </div>
+            <div class="hero-bg-slide" style="background-image: url('./assets/hero2.webp');">
+            </div>
+            <div class="hero-bg-slide" style="background-image: url('./assets/hero3.webp');">
+            </div>
+            <div class="hero-overlay"></div>
+        </div>
+
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge gsap-hero">
+                    <span class="badge-icon"><i class="fas fa-star"></i></span>
+                    <span>Premium Real Estate Agency</span>
+                </div>
+
+                <h1 class="hero-title gsap-hero">
+                    <span class="title-line">Find Your Perfect</span>
+                    <span class="title-line accent">Dream Home</span>
+                </h1>
+
+                <p class="hero-desc gsap-hero">
+                    Discover exclusive luxury properties in the most sought-after locations.
+                    Let our expert agents guide you to your perfect home with personalized service
+                    and unmatched market expertise.
+                </p>
+
+                <div class="hero-stats gsap-hero">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="2500">0</span>
+                        <span class="stat-label">Properties Sold</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="1500">0</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="98">0</span>
+                        <span class="stat-label">% Satisfaction</span>
+                    </div>
+                </div>
+
+                <div class="hero-quick-links gsap-hero">
+                    <span class="quick-label">Popular:</span>
+                    <a href="404page.html" class="quick-link">Luxury Villas</a>
+                    <a href="404page.html" class="quick-link">Downtown Apartments</a>
+                    <a href="404page.html" class="quick-link">Beach Houses</a>
+                </div>
+            </div>
+
+            <div class="hero-showcase gsap-hero">
+                <div class="showcase-card main-card">
+                    <img src="./assets/hero4.webp" alt="Luxury Property">
+                    <div class="card-badge">
+                        <span class="material-icons">verified</span>
+                        Featured
+                    </div>
+                </div>
+                <div class="showcase-card small-card-1">
+                    <img src="./assets/hero5.webp" alt="Property">
+                </div>
+                <div class="showcase-card small-card-2">
+                    <img src="./assets/hero6.webp" alt="Property">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="agency-vision">
+        <div class="vision-container">
+            <div class="vision-content">
+                <div class="vision-badge">Who We Are</div>
+                <h2 class="vision-title">Redefining Luxury Real Estate Since 2010</h2>
+                <p class="vision-desc">
+                    At Stackly, we believe that finding your perfect home is more than just a transaction—it's a
+                    life-changing experience. For over 15 years, we've been transforming the real estate journey into a
+                    seamless, enjoyable adventure for discerning clients worldwide.
+                </p>
+                <p class="vision-desc">
+                    Our commitment to excellence has made us the preferred choice for luxury property seekers. We
+                    combine cutting-edge technology with personalized service to match you with properties that aren't
+                    just houses, but homes where memories are made.
+                </p>
+                <div class="vision-features">
+                    <div class="vision-feature">
+                        <span class="feature-icon"><i class="fas fa-award"></i></span>
+                        <div class="feature-text">
+                            <h4>Award-Winning Service</h4>
+                            <p>Recognized industry excellence</p>
+                        </div>
+                    </div>
+                    <div class="vision-feature">
+                        <span class="feature-icon"><i class="fas fa-shield-alt"></i></span>
+                        <div class="feature-text">
+                            <h4>Trusted Expertise</h4>
+                            <p>150+ expert agents</p>
+                        </div>
+                    </div>
+                    <div class="vision-feature">
+                        <span class="feature-icon"><i class="fas fa-globe"></i></span>
+                        <div class="feature-text">
+                            <h4>Global Presence</h4>
+                            <p>25+ countries served</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="404page.html" class="btn-vision">Learn More About Us</a>
+            </div>
+            <div class="vision-images">
+                <div class="vision-img-main">
+                    <img src="./assets/who1.webp" alt="Modern Office">
+                    <div class="exp-badge">
+                        <span class="exp-number">15+</span>
+                        <span class="exp-text">Years<br>Experience</span>
+                    </div>
+                </div>
+                <div class="vision-img-grid">
+                    <img src="./assets/who3.webp" alt="Luxury Interior">
+                    <img src="./assets/who2.webp" alt="Property View">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-listings">
+        <div class="listings-header">
+            <div class="listings-badge">Exclusive Collection</div>
+            <h2 class="listings-title">Featured Properties</h2>
+            <p class="listings-subtitle">Handpicked luxury properties that define exceptional living</p>
+        </div>
+
+        <div class="listings-grid">
+            <div class="property-card">
+                <div class="property-image">
+                    <img src="./assets/collection1.webp" alt="Luxury Villa">
+                    <div class="property-badges">
+                        <span class="badge-featured">Featured</span>
+                        <span class="badge-type">For Sale</span>
+                    </div>
+                    <button class="favorite-btn"><span class="material-icons">favorite_border</span></button>
+                </div>
+                <div class="property-details">
+                    <div class="property-price">$2,450,000</div>
+                    <h3 class="property-name">Modern Beachfront Villa</h3>
+                    <p class="property-location"><span class="material-icons">location_on</span> Malibu, California</p>
+                    <div class="property-specs">
+                        <span><span class="material-icons">bed</span> 5 Beds</span>
+                        <span><span class="material-icons">bathtub</span> 6 Baths</span>
+                        <span><span class="material-icons">square_foot</span> 4,500 sqft</span>
+                    </div>
+                    <div class="property-footer">
+                        <div class="agent-info">
+                            <img src="./assets/team1.webp" alt="Agent">
+                            <span>James Wilson</span>
+                        </div>
+                        <a href="404page.html" class="view-btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <div class="property-image">
+                    <img src="./assets/collection2.webp" alt="Luxury Home">
+                    <div class="property-badges">
+                        <span class="badge-featured">New</span>
+                        <span class="badge-type">For Rent</span>
+                    </div>
+                    <button class="favorite-btn"><span class="material-icons">favorite_border</span></button>
+                </div>
+                <div class="property-details">
+                    <div class="property-price">$12,000<span>/month</span></div>
+                    <h3 class="property-name">Penthouse Suite</h3>
+                    <p class="property-location"><span class="material-icons">location_on</span> Manhattan, NYC</p>
+                    <div class="property-specs">
+                        <span><span class="material-icons">bed</span> 3 Beds</span>
+                        <span><span class="material-icons">bathtub</span> 3 Baths</span>
+                        <span><span class="material-icons">square_foot</span> 2,800 sqft</span>
+                    </div>
+                    <div class="property-footer">
+                        <div class="agent-info">
+                            <img src="./assets/team2.webp" alt="Agent">
+                            <span>Sarah Johnson</span>
+                        </div>
+                        <a href="404page.html" class="view-btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <div class="property-image">
+                    <img src="./assets/collection3.webp" alt="Luxury Villa">
+                    <div class="property-badges">
+                        <span class="badge-featured">Hot</span>
+                        <span class="badge-type">For Sale</span>
+                    </div>
+                    <button class="favorite-btn"><span class="material-icons">favorite_border</span></button>
+                </div>
+                <div class="property-details">
+                    <div class="property-price">$5,800,000</div>
+                    <h3 class="property-name">Mediterranean Estate</h3>
+                    <p class="property-location"><span class="material-icons">location_on</span> Miami Beach, Florida
+                    </p>
+                    <div class="property-specs">
+                        <span><span class="material-icons">bed</span> 7 Beds</span>
+                        <span><span class="material-icons">bathtub</span> 8 Baths</span>
+                        <span><span class="material-icons">square_foot</span> 9,200 sqft</span>
+                    </div>
+                    <div class="property-footer">
+                        <div class="agent-info">
+                            <img src="./assets/team3.webp" alt="Agent">
+                            <span>Michael Chen</span>
+                        </div>
+                        <a href="404page.html" class="view-btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <div class="property-image">
+                    <img src="./assets/collection4.webp" alt="Luxury Apartment">
+                    <div class="property-badges">
+                        <span class="badge-type">For Sale</span>
+                    </div>
+                    <button class="favorite-btn"><span class="material-icons">favorite_border</span></button>
+                </div>
+                <div class="property-details">
+                    <div class="property-price">$1,890,000</div>
+                    <h3 class="property-name">Skyline Apartment</h3>
+                    <p class="property-location"><span class="material-icons">location_on</span> Downtown Dubai</p>
+                    <div class="property-specs">
+                        <span><span class="material-icons">bed</span> 4 Beds</span>
+                        <span><span class="material-icons">bathtub</span> 4 Baths</span>
+                        <span><span class="material-icons">square_foot</span> 3,200 sqft</span>
+                    </div>
+                    <div class="property-footer">
+                        <div class="agent-info">
+                            <img src="./assets/test.webp" alt="Agent">
+                            <span>Emma Davis</span>
+                        </div>
+                        <a href="404page.html" class="view-btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <div class="property-image">
+                    <img src="./assets/collection5.webp" alt="Luxury House">
+                    <div class="property-badges">
+                        <span class="badge-featured">Premium</span>
+                        <span class="badge-type">For Sale</span>
+                    </div>
+                    <button class="favorite-btn"><span class="material-icons">favorite_border</span></button>
+                </div>
+                <div class="property-details">
+                    <div class="property-price">$3,750,000</div>
+                    <h3 class="property-name">Hillside Mansion</h3>
+                    <p class="property-location"><span class="material-icons">location_on</span> Beverly Hills, CA</p>
+                    <div class="property-specs">
+                        <span><span class="material-icons">bed</span> 6 Beds</span>
+                        <span><span class="material-icons">bathtub</span> 7 Baths</span>
+                        <span><span class="material-icons">square_foot</span> 7,500 sqft</span>
+                    </div>
+                    <div class="property-footer">
+                        <div class="agent-info">
+                            <img src="./assets/test1.webp" alt="Agent">
+                            <span>David Ross</span>
+                        </div>
+                        <a href="404page.html" class="view-btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <div class="property-image">
+                    <img src="./assets/collection6.webp" alt="Luxury Condo">
+                    <div class="property-badges">
+                        <span class="badge-type">For Rent</span>
+                    </div>
+                    <button class="favorite-btn"><span class="material-icons">favorite_border</span></button>
+                </div>
+                <div class="property-details">
+                    <div class="property-price">$8,500<span>/month</span></div>
+                    <h3 class="property-name">Waterfront Condo</h3>
+                    <p class="property-location"><span class="material-icons">location_on</span> Sydney, Australia</p>
+                    <div class="property-specs">
+                        <span><span class="material-icons">bed</span> 2 Beds</span>
+                        <span><span class="material-icons">bathtub</span> 2 Baths</span>
+                        <span><span class="material-icons">square_foot</span> 1,500 sqft</span>
+                    </div>
+                    <div class="property-footer">
+                        <div class="agent-info">
+                            <img src="./assets/team4.webp" alt="Agent">
+                            <span>Lisa Wang</span>
+                        </div>
+                        <a href="404page.html" class="view-btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="listings-cta">
+            <a href="404page.html" class="btn-view-all">View All Properties</a>
+        </div>
+    </section>
+
+    <section class="premium-services">
+        <div class="services-header">
+            <div class="services-badge">Our Services</div>
+            <h2 class="services-title">Premium Real Estate Services</h2>
+            <p class="services-subtitle">Comprehensive solutions tailored to your unique needs</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <span class="material-icons">home</span>
+                </div>
+                <h3 class="service-name">Buy Property</h3>
+                <p class="service-desc">Find your dream home from our curated collection of luxury properties in prime
+                    locations worldwide.</p>
+                <a href="404page.html" class="service-link">Learn More <span
+                        class="material-icons">arrow_forward</span></a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <span class="material-icons">sell</span>
+                </div>
+                <h3 class="service-name">Sell Property</h3>
+                <p class="service-desc">Get the best value for your property with our expert marketing strategies and
+                    global reach.</p>
+                <a href="404page.html" class="service-link">Learn More <span
+                        class="material-icons">arrow_forward</span></a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <span class="material-icons">apartment</span>
+                </div>
+                <h3 class="service-name">Rent Property</h3>
+                <p class="service-desc">Discover premium rental options with flexible terms and premium amenities.</p>
+                <a href="404page.html" class="service-link">Learn More <span
+                        class="material-icons">arrow_forward</span></a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <span class="material-icons">account_balance</span>
+                </div>
+                <h3 class="service-name">Property Management</h3>
+                <p class="service-desc">Full-service property management to maximize your investment returns
+                    effortlessly.</p>
+                <a href="404page.html" class="service-link">Learn More <span
+                        class="material-icons">arrow_forward</span></a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <span class="material-icons">gavel</span>
+                </div>
+                <h3 class="service-name">Legal Assistance</h3>
+                <p class="service-desc">Expert legal support for smooth transactions and peace of mind throughout your
+                    journey.</p>
+                <a href="404page.html" class="service-link">Learn More <span
+                        class="material-icons">arrow_forward</span></a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <span class="material-icons">trending_up</span>
+                </div>
+                <h3 class="service-name">Investment Advisory</h3>
+                <p class="service-desc">Strategic investment opportunities with high ROI potential in premium markets.
+                </p>
+                <a href="404page.html" class="service-link">Learn More <span
+                        class="material-icons">arrow_forward</span></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="neighborhood-expertise">
+        <div class="expertise-container">
+            <div class="expertise-content">
+                <div class="expertise-badge">Area Guides</div>
+                <h2 class="expertise-title">Neighborhood Expertise</h2>
+                <p class="expertise-desc">Discover the world's most coveted neighborhoods with our local market experts.
+                </p>
+            </div>
+
+            <div class="locations-grid">
+                <a href="404page.html" class="location-card">
+                    <img src="./assets/neigh1.webp" alt="New York">
+                    <div class="location-overlay">
+                        <h3>New York</h3>
+                        <p>245 Properties</p>
+                    </div>
+                </a>
+
+                <a href="404page.html" class="location-card">
+                    <img src="./assets/neigh2.webp" alt="Los Angeles">
+                    <div class="location-overlay">
+                        <h3>Los Angeles</h3>
+                        <p>189 Properties</p>
+                    </div>
+                </a>
+
+                <a href="404page.html" class="location-card">
+                    <img src="./assets/neigh3.webp" alt="Miami">
+                    <div class="location-overlay">
+                        <h3>Miami</h3>
+                        <p>156 Properties</p>
+                    </div>
+                </a>
+
+                <a href="404page.html" class="location-card">
+                    <img src="./assets/neigh4.webp" alt="Dubai">
+                    <div class="location-overlay">
+                        <h3>Dubai</h3>
+                        <p>312 Properties</p>
+                    </div>
+                </a>
+
+                <a href="404page.html" class="location-card">
+                    <img src="./assets/neigh5.webp" alt="Sydney">
+                    <div class="location-overlay">
+                        <h3>Sydney</h3>
+                        <p>98 Properties</p>
+                    </div>
+                </a>
+
+                <a href="404page.html" class="location-card">
+                    <img src="./assets/neigh6.webp" alt="London">
+                    <div class="location-overlay">
+                        <h3>London</h3>
+                        <p>176 Properties</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="elite-agents">
+        <div class="agents-header">
+            <div class="agents-badge">Our Team</div>
+            <h2 class="agents-title">Meet Our Elite Agents</h2>
+            <p class="agents-subtitle">Work with the best in the industry</p>
+        </div>
+
+        <div class="agents-grid">
+            <div class="agent-card">
+                <div class="agent-image">
+                    <img src="./assets/team1.webp" alt="Agent">
+                    <div class="agent-social">
+                        <a href="404page.html"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="404page.html"><i class="fab fa-twitter"></i></a>
+                        <a href="404page.html"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="agent-info">
+                    <h3>James Wilson</h3>
+                    <p class="agent-title">Senior Property Consultant</p>
+                    <p class="agent-experties">Luxury Homes, Investment Properties</p>
+                    <div class="agent-stats">
+                        <span><strong>150+</strong> Properties Sold</span>
+                        <span><strong>98%</strong> Satisfaction</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="agent-card">
+                <div class="agent-image">
+                    <img src="./assets/team2.webp" alt="Agent">
+                    <div class="agent-social">
+                        <a href="404page.html"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="404page.html"><i class="fab fa-twitter"></i></a>
+                        <a href="404page.html"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="agent-info">
+                    <h3>Sarah Johnson</h3>
+                    <p class="agent-title">Global Property Specialist</p>
+                    <p class="agent-experties">International Sales, Penthouses</p>
+                    <div class="agent-stats">
+                        <span><strong>120+</strong> Properties Sold</span>
+                        <span><strong>95%</strong> Satisfaction</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="agent-card">
+                <div class="agent-image">
+                    <img src="./assets/team3.webp" alt="Agent">
+                    <div class="agent-social">
+                        <a href="404page.html"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="404page.html"><i class="fab fa-twitter"></i></a>
+                        <a href="404page.html"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="agent-info">
+                    <h3>Michael Chen</h3>
+                    <p class="agent-title">Investment Advisor</p>
+                    <p class="agent-experties">Commercial, Investment Properties</p>
+                    <div class="agent-stats">
+                        <span><strong>$50M+</strong> Sales Volume</span>
+                        <span><strong>97%</strong> Satisfaction</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="agent-card">
+                <div class="agent-image">
+                    <img src="./assets/team4.webp" alt="Agent">
+                    <div class="agent-social">
+                        <a href="404page.html"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="404page.html"><i class="fab fa-twitter"></i></a>
+                        <a href="404page.html"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="agent-info">
+                    <h3>Emma Davis</h3>
+                    <p class="agent-title">Luxury Property Expert</p>
+                    <p class="agent-experties">Villas, Beachfront Properties</p>
+                    <div class="agent-stats">
+                        <span><strong>180+</strong> Properties Sold</span>
+                        <span><strong>99%</strong> Satisfaction</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="vip-cta">
+        <div class="cta-bg">
+            <img src="./assets/hero1.webp" alt="Luxury Home">
+            <div class="cta-overlay"></div>
+        </div>
+        <div class="cta-content">
+            <div class="cta-badge"><span class="material-icons">star</span> VIP Program</div>
+            <h2 class="cta-title">Join Our Exclusive VIP Program</h2>
+            <p class="cta-desc">Get early access to premium listings, personalized property matching, and exclusive
+                deals available only to our VIP members.</p>
+
+            <div class="cta-features">
+                <div class="cta-feature">
+                    <span class="material-icons">key</span>
+                    <span>Early Access to Listings</span>
+                </div>
+                <div class="cta-feature">
+                    <span class="material-icons">person_pin</span>
+                    <span>Dedicated Agent Support</span>
+                </div>
+                <div class="cta-feature">
+                    <span class="material-icons">percent</span>
+                    <span>Exclusive Discounts</span>
+                </div>
+                <div class="cta-feature">
+                    <span class="material-icons">verified</span>
+                    <span>Priority Processing</span>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="404page.html" class="btn-cta-primary">Join VIP Now</a>
+                <a href="404page.html" class="btn-cta-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <div class="testimonials-header">
+            <div class="testimonials-badge">Testimonials</div>
+            <h2 class="testimonials-title">What Our Clients Say</h2>
+            <p class="testimonials-subtitle">Real stories from satisfied homeowners and investors</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card featured-testimonial">
+                <div class="testimonial-image">
+                    <img src="./assets/hero4.webp" alt="Luxury Home">
+                    <div class="testimonial-verified">
+                        <span class="material-icons">verified</span>
+                        Verified Purchase
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Stackly made finding our dream home an absolute pleasure. Their team
+                        went above and beyond to understand our needs and found us the perfect property in just two
+                        weeks. The professionalism and attention to detail were exceptional!"</p>
+                    <div class="testimonial-author">
+                        <img src="./assets/team1.webp" alt="Client">
+                        <div class="author-info">
+                            <h4>Robert & Jennifer Martinez</h4>
+                            <p>Purchased in Beverly Hills, CA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-quote-icon">
+                    <span class="material-icons">format_quote</span>
+                </div>
+                <p class="testimonial-text">"As an international investor, I needed a team that understood global
+                    markets. Stackly's expertise in luxury properties across multiple countries is unmatched. They
+                    secured an excellent investment property with great ROI potential."</p>
+                <div class="testimonial-author">
+                    <img src="./assets/team3.webp" alt="Client">
+                    <div class="author-info">
+                        <h4>Alexander Thompson</h4>
+                        <p>Investment Property, Dubai</p>
+                    </div>
+                </div>
+                <div class="testimonial-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-quote-icon">
+                    <span class="material-icons">format_quote</span>
+                </div>
+                <p class="testimonial-text">"We were nervous about selling our family home, but Stackly made the entire
+                    process seamless. Their marketing strategy brought multiple offers within the first week. They truly
+                    exceeded our expectations!"</p>
+                <div class="testimonial-author">
+                    <img src="./assets/team2.webp" alt="Client">
+                    <div class="author-info">
+                        <h4>Emily Richardson</h4>
+                        <p>Sold Property in Miami, FL</p>
+                    </div>
+                </div>
+                <div class="testimonial-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-quote-icon">
+                    <span class="material-icons">format_quote</span>
+                </div>
+                <p class="testimonial-text">"Relocating from abroad was stressful, but Stackly's team handled
+                    everything. They found us a stunning apartment close to my office and even helped with the move-in
+                    process. Outstanding service from start to finish!"</p>
+                <div class="testimonial-author">
+                    <img src="./assets/team4.webp" alt="Client">
+                    <div class="author-info">
+                        <h4>David Kim</h4>
+                        <p>Rented in Manhattan, NYC</p>
+                    </div>
+                </div>
+                <div class="testimonial-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter-section">
+        <div class="newsletter-bg">
+            <img src="./assets/hero2.webp" alt="Luxury Interior">
+            <div class="newsletter-overlay"></div>
+        </div>
+        <div class="newsletter-content">
+            <div class="newsletter-badge">Stay Updated</div>
+            <h2 class="newsletter-title">Get the Latest Luxury Listings</h2>
+            <p class="newsletter-desc">Subscribe to our newsletter and be the first to know about exclusive properties,
+                market insights, and special offers.</p>
+
+            <form class="newsletter-form">
+                <div class="newsletter-input-group">
+                    <span class="material-icons">email</span>
+                    <input type="email" placeholder="Enter your email address" required>
+                </div>
+                <button type="submit" class="newsletter-btn">
+                    Subscribe Now
+                    <span class="material-icons">arrow_forward</span>
+                </button>
+            </form>
+
+            <p class="newsletter-privacy">
+                <span class="material-icons">lock</span>
+                We respect your privacy. Unsubscribe at any time.
+            </p>
+
+            <div class="newsletter-stats">
+                <div class="newsletter-stat">
+                    <span class="stat-num">25K+</span>
+                    <span class="stat-label">Subscribers</span>
+                </div>
+                <div class="newsletter-stat">
+                    <span class="stat-num">500+</span>
+                    <span class="stat-label">Properties Weekly</span>
+                </div>
+                <div class="newsletter-stat">
+                    <span class="stat-num">100%</span>
+                    <span class="stat-label">Privacy Protected</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="footer-container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="index.html" class="footer-logo">
+                            <img src="./assets/stackly-logo.webp" alt="Stackly Logo">
+                        </a>
+                        <p class="footer-desc">Your trusted partner in finding the perfect luxury home. Experience
+                            premium real estate services with personalized attention.</p>
+                        <div class="footer-social">
+                            <a href="404page.html"><i class="fab fa-facebook-f"></i></a>
+                            <a href="404page.html"><i class="fab fa-twitter"></i></a>
+                            <a href="404page.html"><i class="fab fa-instagram"></i></a>
+                            <a href="404page.html"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="properties.html">About</a></li>
+                            <li><a href="service.html">Services</a></li>
+                            <li><a href="properties.html">Properties</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="404page.html">About Us</a></li>
+                            <li><a href="404page.html">Careers</a></li>
+                            <li><a href="404page.html">Blog</a></li>
+                            <li><a href="404page.html">Press</a></li>
+                            <li><a href="404page.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="404page.html">Property Management</a></li>
+                            <li><a href="404page.html">Legal Assistance</a></li>
+                            <li><a href="404page.html">Investment Advisory</a></li>
+                            <li><a href="404page.html">VIP Program</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-contact">
+                        <h3>Contact Us</h3>
+                        <div class="contact-item">
+                            <span class="material-icons">location_on</span>
+                            <span>Salem, Tamil Nadu</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="material-icons">phone</span>
+                            <span>+91 9876543210</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="material-icons">email</span>
+                            <span>info@thestackly.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2026 Real Estate. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="404page.html">Privacy Policy</a>
+                    <a href="404page.html">Terms of Service</a>
+                    <a href="404page.html">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        const homeDropdownBtn = document.getElementById("homeDropdownBtn");
+        const homeDropdown = document.getElementById("homeDropdown");
+        const icon = document.querySelector(".dropdown-icon");
+
+        homeDropdownBtn.addEventListener("click", () => {
+            homeDropdown.classList.toggle("show");
+            icon.classList.toggle("rotate");
+        });
+        document.addEventListener("click", (e) => {
+            if (!homeDropdown.contains(e.target) && !homeDropdownBtn.contains(e.target)) {
+                homeDropdown.classList.remove("show");
+                icon.classList.remove("rotate");
+            }
+        });
+    </script>
+</body>
+
+</html>

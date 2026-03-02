@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Stackly Premium Real Estate</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Space+Grotesk:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+</head>
+
+<body>
+
+    <header class="agency-header" id="agencyHeader">
+        <div class="header-container">
+            <a href="index.html" class="agency-logo">
+                <img src="./assets/stackly-logo.webp" alt="Stackly Logo">
+            </a>
+
+            <nav class="agency-nav" id="agencyNav">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
+                    <li class="nav-item"><a href="service.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="properties.html" class="nav-link">Properties</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <div class="header-actions mob-view">
+                        <a href="login.html" class="btn-login">
+                            <span class="material-icons">person</span>
+                            Login
+                        </a>
+                    </div>
+                </ul>
+                <div class="mobile-close" id="mobileClose">
+                    <span class="material-icons">close</span>
+                </div>
+            </nav>
+
+            <div class="header-actions">
+                <a href="login.html" class="btn-login">
+                    <span class="material-icons">person</span>
+                    Login
+                </a>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span class="material-icons">menu</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="about-hero">
+        <div class="about-hero-bg">
+            <img src="./assets/hero-bg.webp" alt="Luxury Real Estate">
+            <div class="about-hero-overlay"></div>
+        </div>
+        <div class="about-hero-content">
+            <div class="about-hero-badge">
+                <span class="material-icons">verified</span>
+                Premium Real Estate Agency
+            </div>
+            <h1 class="about-hero-title">About <span class="accent">Stackly</span></h1>
+            <p class="about-hero-desc">Discover the story behind your trusted partner in luxury real estate. We're
+                dedicated to transforming your property dreams into reality.</p>
+            <div class="about-hero-breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="material-icons">chevron_right</span>
+                <span>About Us</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-story">
+        <div class="story-container">
+            <div class="story-content">
+                <div class="story-badge">Our Journey</div>
+                <h2 class="story-title">Building Dreams Since 2010</h2>
+                <p class="story-desc">Founded with a vision to revolutionize the luxury real estate experience, Stackly
+                    has grown from a small boutique agency to a global powerhouse in premium property services. Our
+                    journey is defined by an unwavering commitment to excellence and a passion for helping clients find
+                    their perfect homes.</p>
+                <p class="story-desc">Over the years, we've facilitated over $2 billion in property transactions,
+                    establishing ourselves as the go-to partner for discerning buyers and sellers seeking premium real
+                    estate solutions.</p>
+                <div class="story-features">
+                    <div class="story-feature">
+                        <span class="story-feature-icon"><i class="fas fa-handshake"></i></span>
+                        <div class="story-feature-text">
+                            <h4>Trusted Partnership</h4>
+                            <p>Building lasting relationships</p>
+                        </div>
+                    </div>
+                    <div class="story-feature">
+                        <span class="story-feature-icon"><i class="fas fa-rocket"></i></span>
+                        <div class="story-feature-text">
+                            <h4>Innovation First</h4>
+                            <p>Leading-edge technology</p>
+                        </div>
+                    </div>
+                    <div class="story-feature">
+                        <span class="story-feature-icon"><i class="fas fa-heart"></i></span>
+                        <div class="story-feature-text">
+                            <h4>Client-Centric</h4>
+                            <p>Your success is our priority</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="story-images">
+                <div class="story-img-main">
+                    <img src="./assets/who1.webp" alt="Modern Office">
+                    <div class="story-year-badge">
+                        <span class="year-number">15+</span>
+                        <span class="year-text">Years of Excellence</span>
+                    </div>
+                </div>
+                <div class="story-img-grid">
+                    <img src="./assets/who2.webp" alt="Luxury Interior">
+                    <img src="./assets/who3.webp" alt="Property View">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-stats">
+        <div class="stats-container hero-stats">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon"><span class="material-icons">home</span></div>
+                    <div class="stat-number" data-count="2500">0</div>
+                    <div class="stat-label">Properties Sold</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><span class="material-icons">people</span></div>
+                    <div class="stat-number" data-count="1500">0</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><span class="material-icons">location_on</span></div>
+                    <div class="stat-number" data-count="50">0</div>
+                    <div class="stat-label">Locations Worldwide</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><span class="material-icons">attach_money</span></div>
+                    <div class="stat-number" data-count="2">0</div>
+                    <div class="stat-label">Billion in Sales</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><span class="material-icons">groups</span></div>
+                    <div class="stat-number" data-count="150">0</div>
+                    <div class="stat-label">Expert Agents</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><span class="material-icons">star</span></div>
+                    <div class="stat-number" data-count="98">0</div>
+                    <div class="stat-label">% Satisfaction Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mission-vision">
+        <div class="mv-container">
+            <div class="mv-content">
+                <div class="mv-badge">Our Purpose</div>
+                <h2 class="mv-title">Mission & Vision</h2>
+            </div>
+            <div class="mv-grid">
+                <div class="mv-card mission-card">
+                    <div class="mv-card-icon">
+                        <span class="material-icons">flag</span>
+                    </div>
+                    <h3 class="mv-card-title">Our Mission</h3>
+                    <p class="mv-card-desc">To deliver exceptional real estate experiences by combining innovative
+                        technology with personalized service. We strive to make property transactions seamless,
+                        transparent, and rewarding for every client we serve.</p>
+                </div>
+                <div class="mv-card vision-card">
+                    <div class="mv-card-icon">
+                        <span class="material-icons">visibility</span>
+                    </div>
+                    <h3 class="mv-card-title">Our Vision</h3>
+                    <p class="mv-card-desc">To be the most trusted name in luxury real estate globally, setting new
+                        standards of excellence while helping people find not just properties, but homes where dreams
+                        come true.</p>
+                </div>
+                <div class="mv-card values-card">
+                    <div class="mv-card-icon">
+                        <span class="material-icons">diamond</span>
+                    </div>
+                    <h3 class="mv-card-title">Our Values</h3>
+                    <p class="mv-card-desc">Integrity, Excellence, Innovation, and Client-Centricity guide everything we
+                        do. We believe in building relationships that last a lifetime through honest dealings and
+                        exceptional service.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-team">
+        <div class="team-header">
+            <div class="team-badge">Our Team</div>
+            <h2 class="team-title">Meet Our Leadership</h2>
+            <p class="team-subtitle">The passionate experts behind Stackly's success</p>
+        </div>
+
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="team-image">
+                    <img src="./assets/team1.webp" alt="CEO">
+                    <div class="team-social">
+                        <a href="404page.html"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="404page.html"><i class="fab fa-twitter"></i></a>
+                        <a href="404page.html"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="team-info">
+                    <h3>Alexander Morgan</h3>
+                    <p class="team-role">CEO & Founder</p>
+                    <p class="team-desc">20+ years in luxury real estate, former VP at Fortune 500 developer.</p>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="team-image">
+                    <img src="./assets/team2.webp" alt="COO">
+                    <div class="team-social">
+                        <a href="404page.html"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="404page.html"><i class="fab fa-twitter"></i></a>
+                        <a href="404page.html"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="team-info">
+                    <h3>Victoria Chen</h3>
+                    <p class="team-role">Chief Operating Officer</p>
+                    <p class="team-desc">Operations expert with background in global property management.</p>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="team-image">
+                    <img src="./assets/team3.webp" alt="CFO">
+                    <div class="team-social">
+                        <a href="404page.html"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="404page.html"><i class="fab fa-twitter"></i></a>
+                        <a href="404page.html"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="team-info">
+                    <h3>Marcus Williams</h3>
+                    <p class="team-role">Chief Financial Officer</p>
+                    <p class="team-desc">Investment specialist with expertise in commercial real estate.</p>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="team-image">
+                    <img src="./assets/team4.webp" alt="CMO">
+                    <div class="team-social">
+                        <a href="404page.html"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="404page.html"><i class="fab fa-twitter"></i></a>
+                        <a href="404page.html"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="team-info">
+                    <h3>Emily Rodriguez</h3>
+                    <p class="team-role">Chief Marketing Officer</p>
+                    <p class="team-desc">Brand strategist with 15 years in luxury marketing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose-us">
+        <div class="wcu-container">
+            <div class="wcu-content">
+                <div class="wcu-badge">Why Choose Us</div>
+                <h2 class="wcu-title">The Stackly Difference</h2>
+                <p class="wcu-desc">Experience the future of luxury real estate with our innovative approach and
+                    unwavering commitment to excellence.</p>
+            </div>
+            <div class="wcu-grid">
+                <div class="wcu-card">
+                    <div class="wcu-icon">
+                        <span class="material-icons">psychology</span>
+                    </div>
+                    <h3 class="wcu-card-title">AI-Powered Matching</h3>
+                    <p class="wcu-card-desc">Our advanced AI algorithms match you with properties that perfectly align
+                        with your preferences and lifestyle needs.</p>
+                </div>
+                <div class="wcu-card">
+                    <div class="wcu-icon">
+                        <span class="material-icons">language</span>
+                    </div>
+                    <h3 class="wcu-card-title">Global Reach</h3>
+                    <p class="wcu-card-desc">Access exclusive properties across 50+ locations worldwide through our
+                        extensive network of partners.</p>
+                </div>
+                <div class="wcu-card">
+                    <div class="wcu-icon">
+                        <span class="material-icons">security</span>
+                    </div>
+                    <h3 class="wcu-card-title">Secure Transactions</h3>
+                    <p class="wcu-card-desc">End-to-end encryption and verified processes ensure your investments are
+                        protected at every step.</p>
+                </div>
+                <div class="wcu-card">
+                    <div class="wcu-icon">
+                        <span class="material-icons">support_agent</span>
+                    </div>
+                    <h3 class="wcu-card-title">24/7 Concierge</h3>
+                    <p class="wcu-card-desc">Round-the-clock support from our dedicated team of property experts.</p>
+                </div>
+                <div class="wcu-card">
+                    <div class="wcu-icon">
+                        <span class="material-icons">trending_up</span>
+                    </div>
+                    <h3 class="wcu-card-title">Investment Insights</h3>
+                    <p class="wcu-card-desc">Market analysis and investment opportunities with proven ROI potential.</p>
+                </div>
+                <div class="wcu-card">
+                    <div class="wcu-icon">
+                        <span class="material-icons">handshake</span>
+                    </div>
+                    <h3 class="wcu-card-title">Transparent Process</h3>
+                    <p class="wcu-card-desc">Clear communication and full visibility into every stage of your
+                        transaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="awards-section">
+        <div class="awards-header">
+            <div class="awards-badge">Recognition</div>
+            <h2 class="awards-title">Awards & Certifications</h2>
+            <p class="awards-subtitle">Industry-leading recognition for excellence</p>
+        </div>
+
+        <div class="awards-grid">
+            <div class="award-card">
+                <div class="award-icon"><i class="fas fa-trophy"></i></div>
+                <h3>Best Luxury Real Estate Agency 2024</h3>
+                <p>Global Property Awards</p>
+            </div>
+            <div class="award-card">
+                <div class="award-icon"><i class="fas fa-medal"></i></div>
+                <h3>Customer Service Excellence</h3>
+                <p>International Real Estate Federation</p>
+            </div>
+            <div class="award-card">
+                <div class="award-icon"><i class="fas fa-star"></i></div>
+                <h3>Top Workplace 2024</h3>
+                <p>Real Estate Business Magazine</p>
+            </div>
+            <div class="award-card">
+                <div class="award-icon"><i class="fas fa-certificate"></i></div>
+                <h3>ISO 9001 Certified</h3>
+                <p>Quality Management Systems</p>
+            </div>
+            <div class="award-card">
+                <div class="award-icon"><i class="fas fa-award"></i></div>
+                <h3>Most Trusted Brand 2023</h3>
+                <p>Consumer Trust Foundation</p>
+            </div>
+            <div class="award-card">
+                <div class="award-icon"><i class="fas fa-crown"></i></div>
+                <h3>Innovation in Real Estate</h3>
+                <p>Tech Forward Awards</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-about">
+        <div class="testimonials-about-header">
+            <div class="testimonials-about-badge">Testimonials</div>
+            <h2 class="testimonials-about-title">What Our Clients Say</h2>
+            <p class="testimonials-about-subtitle">Real stories from satisfied homeowners and investors</p>
+        </div>
+
+        <div class="testimonials-about-grid">
+            <div class="testimonial-about-card">
+                <div class="testimonial-quote-icon">
+                    <span class="material-icons">format_quote</span>
+                </div>
+                <p class="testimonial-text">"Stackly made finding our dream home an absolute pleasure. Their team went
+                    above and beyond to understand our needs and found us the perfect property in just two weeks."</p>
+                <div class="testimonial-author">
+                    <img src="./assets/test.webp" alt="Client">
+                    <div class="author-info">
+                        <h4>Robert & Jennifer Martinez</h4>
+                        <p>Purchased in Beverly Hills, CA</p>
+                    </div>
+                </div>
+                <div class="testimonial-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+            <div class="testimonial-about-card">
+                <div class="testimonial-quote-icon">
+                    <span class="material-icons">format_quote</span>
+                </div>
+                <p class="testimonial-text">"As an international investor, I needed a team that understood global
+                    markets. Stackly's expertise in luxury properties across multiple countries is unmatched."</p>
+                <div class="testimonial-author">
+                    <img src="./assets/test1.webp" alt="Client">
+                    <div class="author-info">
+                        <h4>Alexander Thompson</h4>
+                        <p>Investment Property, Dubai</p>
+                    </div>
+                </div>
+                <div class="testimonial-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+            <div class="testimonial-about-card">
+                <div class="testimonial-quote-icon">
+                    <span class="material-icons">format_quote</span>
+                </div>
+                <p class="testimonial-text">"We were nervous about selling our family home, but Stackly made the entire
+                    process seamless. Their marketing strategy brought multiple offers within the first week."</p>
+                <div class="testimonial-author">
+                    <img src="./assets/team4.webp" alt="Client">
+                    <div class="author-info">
+                        <h4>Emily Richardson</h4>
+                        <p>Sold Property in Miami, FL</p>
+                    </div>
+                </div>
+                <div class="testimonial-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-cta">
+        <div class="cta-bg">
+            <img src="./assets/hero2.webp" alt="Luxury Home">
+            <div class="cta-overlay"></div>
+        </div>
+        <div class="cta-content">
+            <h2 class="cta-title">Ready to Find Your Dream Home?</h2>
+            <p class="cta-desc">Let our expert team guide you through your real estate journey. Contact us today for a
+                free consultation.</p>
+            <div class="cta-buttons">
+                <a href="404page.html" class="btn-cta-primary">Get Started</a>
+                <a href="404page.html" class="btn-cta-secondary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter-section">
+        <div class="newsletter-bg">
+            <img src="./assets/hero3.webp" alt="Luxury Interior">
+            <div class="newsletter-overlay"></div>
+        </div>
+        <div class="newsletter-content">
+            <div class="newsletter-badge">Stay Updated</div>
+            <h2 class="newsletter-title">Get the Latest Luxury Listings</h2>
+            <p class="newsletter-desc">Subscribe to our newsletter and be the first to know about exclusive properties,
+                market insights, and special offers.</p>
+
+            <form class="newsletter-form">
+                <div class="newsletter-input-group">
+                    <span class="material-icons">email</span>
+                    <input type="email" placeholder="Enter your email address" required>
+                </div>
+                <button type="submit" class="newsletter-btn">
+                    Subscribe Now
+                    <span class="material-icons">arrow_forward</span>
+                </button>
+            </form>
+
+            <p class="newsletter-privacy">
+                <span class="material-icons">lock</span>
+                We respect your privacy. Unsubscribe at any time.
+            </p>
+
+            <div class="newsletter-stats">
+                <div class="newsletter-stat">
+                    <span class="stat-num">25K+</span>
+                    <span class="stat-label">Subscribers</span>
+                </div>
+                <div class="newsletter-stat">
+                    <span class="stat-num">500+</span>
+                    <span class="stat-label">Properties Weekly</span>
+                </div>
+                <div class="newsletter-stat">
+                    <span class="stat-num">100%</span>
+                    <span class="stat-label">Privacy Protected</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="footer-container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="index.html" class="footer-logo">
+                            <img src="./assets/stackly-logo.webp" alt="Stackly Logo">
+                        </a>
+                        <p class="footer-desc">Your trusted partner in finding the perfect luxury home. Experience
+                            premium real estate services with personalized attention.</p>
+                        <div class="footer-social">
+                            <a href="404page.html"><i class="fab fa-facebook-f"></i></a>
+                            <a href="404page.html"><i class="fab fa-twitter"></i></a>
+                            <a href="404page.html"><i class="fab fa-instagram"></i></a>
+                            <a href="404page.html"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="properties.html">About</a></li>
+                            <li><a href="service.html">Services</a></li>
+                            <li><a href="properties.html">Properties</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="404page.html">About Us</a></li>
+                            <li><a href="404page.html">Careers</a></li>
+                            <li><a href="404page.html">Blog</a></li>
+                            <li><a href="404page.html">Press</a></li>
+                            <li><a href="404page.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="404page.html">Property Management</a></li>
+                            <li><a href="404page.html">Legal Assistance</a></li>
+                            <li><a href="404page.html">Investment Advisory</a></li>
+                            <li><a href="404page.html">VIP Program</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-contact">
+                        <h3>Contact Us</h3>
+                        <div class="contact-item">
+                            <span class="material-icons">location_on</span>
+                            <span>Salem, Tamil Nadu</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="material-icons">phone</span>
+                            <span>+91 9876543210</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="material-icons">email</span>
+                            <span>info@thestackly.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2026 Real Estate. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="404page.html">Privacy Policy</a>
+                    <a href="404page.html">Terms of Service</a>
+                    <a href="404page.html">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
