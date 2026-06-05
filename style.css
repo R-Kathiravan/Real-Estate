@@ -665,25 +665,20 @@
     padding: 0 1.5rem 1.5rem 1.5rem;
 }
 
-/* --- Section Layout --- */
-.explore-property {
+ .explore-property {
     padding: 5rem 1.5rem;
     background-color: var(--bg-alt);
-    /* Slightly different background to separate sections */
-    font-family: var(--font-base);
+     font-family: var(--font-base);
 }
 
-/* --- Bento Box Grid --- */
-.explore-grid {
+ .explore-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 280px;
-    /* Base height for all cards */
-    gap: 1.5rem;
+     gap: 1.5rem;
 }
 
-/* Card Sizing Logic */
-.card-sm {
+ .card-sm {
     grid-column: span 1;
 }
 
@@ -696,8 +691,7 @@
     grid-row: span 2;
 }
 
-/* Mobile Responsive Adjustments */
-@media (max-width: 992px) {
+ @media (max-width: 992px) {
     .explore-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -706,21 +700,18 @@
         grid-column: span 2;
     }
 
-    /* Still spans full width on medium screens */
-    .card-tall {
+     .card-tall {
         grid-column: span 2;
         grid-row: span 1;
     }
 
-    /* Reset tall card on smaller screens */
-}
+ }
 
 @media (max-width: 600px) {
     .explore-grid {
         grid-template-columns: 1fr;
         grid-auto-rows: 240px;
-        /* Slightly shorter on mobile */
-    }
+     }
 
     .card-sm,
     .card-lg,
@@ -730,8 +721,7 @@
     }
 }
 
-/* --- Card Styling & Hover --- */
-.explore-card {
+ .explore-card {
     position: relative;
     display: block;
     border-radius: var(--radius-lg);
@@ -746,8 +736,7 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    /* Smooth, premium ease */
-}
+ }
 
 .explore-card:hover {
     box-shadow: var(--shadow-lg);
@@ -756,11 +745,9 @@
 
 .explore-card:hover img {
     transform: scale(1.08);
-    /* Cinematic zoom inside the box */
-}
+ }
 
-/* --- Overlays & Typography --- */
-.card-overlay {
+ .card-overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(to top, rgba(15, 15, 15, 0.85) 0%, rgba(15, 15, 15, 0) 60%);
@@ -792,8 +779,7 @@
     transform: translateX(-10px);
     transition: all var(--transition-base);
     color: var(--gold);
-    /* Adds a premium pop of color */
-}
+ }
 
 .explore-card:hover .card-icon {
     opacity: 1;
@@ -885,8 +871,7 @@
         flex-direction: column;
     }
 }
-
-/* --- Section Layout --- */
+ 
 .properties-rent {
     padding: 6rem 1.5rem;
     background-color: var(--bg-main);
@@ -901,8 +886,7 @@
     /* max-width: 1200px; */
     /* margin: 0 auto; */
 }
-
-/* --- Sticky Sidebar --- */
+ 
 .properties-sidebar {
     position: sticky;
     top: calc(var(--header-height, 80px) + 2rem);
@@ -934,16 +918,14 @@
     background-color: var(--primary-color);
     color: var(--text-inverse);
 }
-
-/* --- Scrolling Stack Area --- */
+ 
 .properties-stack {
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
     padding-bottom: 2rem;
 }
-
-/* --- Horizontal Stack Cards --- */
+ 
 .stack-card {
     position: sticky;
     display: flex;
@@ -953,11 +935,9 @@
     border: 1px solid var(--border-light);
     overflow: hidden;
     transition: transform var(--transition-base), box-shadow var(--transition-base);
-    height: 320px;
-    /* Fixed height for clean stacking */
+    height: 320px; 
 }
-
-/* Sticky Offset Logic for Stacking */
+ 
 .stack-card:nth-child(1) {
     top: calc(var(--header-height, 80px) + 2rem);
     z-index: 1;
@@ -976,8 +956,7 @@
 .stack-card:hover {
     box-shadow: var(--shadow-lg);
 }
-
-/* --- Card Image (Left Side) --- */
+ 
 .stack-card-img {
     position: relative;
     width: 45%;
@@ -1002,8 +981,7 @@
     left: 1rem;
     z-index: 10;
 }
-
-/* --- Card Content (Right Side) --- */
+ 
 .stack-card-content {
     width: 55%;
     padding: 2rem;
@@ -1043,8 +1021,7 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
-
-/* --- Card Bottom / Meta --- */
+ 
 .stack-card-bottom {
     display: flex;
     justify-content: space-between;
@@ -1053,8 +1030,7 @@
     padding-top: 1.25rem;
 }
 
-/* Reusing your spec icons */
-.property-spez {
+ .property-spez {
     display: flex;
     gap: 1rem;
 }
@@ -1120,8 +1096,7 @@
     .stack-card {
         flex-direction: column;
         height: auto;
-        /* Allow height to grow on mobile */
-    }
+     }
 
     .stack-card-img {
         width: 100%;

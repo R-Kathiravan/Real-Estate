@@ -300,7 +300,6 @@ function initSectionHeaderAnimations() {
             }
         });
         if (sectionHead) {
-            // Wrap the text in an overflow:hidden container on the fly
             const text = sectionHead.innerHTML;
             sectionHead.innerHTML = `<div style="overflow: hidden; display: inline-block;"><div class="mask-inner">${text}</div></div>`;
             const inner = sectionHead.querySelector('.mask-inner');
@@ -312,39 +311,35 @@ function initSectionHeaderAnimations() {
         }
 
         if (sectionSubhead) {
-            // 1. Add perspective to the parent to enable 3D rendering
             gsap.set(sectionSubhead, { perspective: 400 });
 
-            // 2. Safer manual split logic
             const words = sectionSubhead.innerText.split(' ');
             sectionSubhead.innerHTML = '';
 
             words.forEach(word => {
                 if (word.trim() !== '') {
-                    // Added vertical-align to keep baselines even
                     sectionSubhead.innerHTML += `<span style="display:inline-block; overflow:hidden; vertical-align:top; margin-right:0.25em;"><span class="word-inner" style="display:inline-block;">${word}</span></span>`;
                 }
             });
 
             const wordInners = sectionSubhead.querySelectorAll('.word-inner');
 
-            // 3. Animate with transformOrigin
             tl.fromTo(wordInners,
                 {
                     y: 50,
                     opacity: 0,
                     rotateX: -90,
-                    transformOrigin: "50% 100%" // Hinges from the bottom
+                    transformOrigin: "50% 100%"
                 },
                 {
                     y: 0,
                     opacity: 1,
                     rotateX: 0,
                     duration: 0.4,
-                    stagger: 0.09, // Sped up the stagger slightly for a smoother wave
-                    ease: "back.out(1.2)" // Adds a tiny, premium bounce at the end
+                    stagger: 0.09,
+                    ease: "back.out(1.2)"
                 },
-                "-=0.5" // Overlap with the header animation
+                "-=0.5"
             );
         }
     });
