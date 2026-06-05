@@ -30,146 +30,214 @@
     --z-modal: 1050;
 }
 
-.property-container {
+.property-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    align-items: center;
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-
 
 .property-card {
-    /* padding: 14px; */
+    background-color: var(--bg-surface);
     border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
     overflow: hidden;
-    height: 100%;
-}
-
-.property-img {
-    position: relative;
-}
-
-.property-img img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    /* border-radius: 20px; */
-}
-
-.property-card:hover .property-img img {
-    transform: scale(1.03);
-}
-
-.property-overlay {
-    position: absolute;
-    top: 20px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.property-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}
+
+.property-img-wrapper {
+    position: relative;
     width: 100%;
-    padding: 0px 20px;
+    height: 280px;
+    overflow: hidden;
 }
 
-.property-overlay .prop-over-g {
-    padding: 10px;
-    border-radius: 20px;
-    font-size: 16px;
-    color: var(--primary-light);
-    font-weight: 600;
-    background-color: var(--status-available);
+.property-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.property-overlay .prop-over-r {
-    padding: 10px;
-    border-radius: 20px;
-    font-size: 16px;
-    color: var(--primary-light);
+.property-card:hover .property-img-wrapper img {
+    transform: scale(1.06);
+}
+
+.property-overlay-top {
+    position: absolute;
+    top: 1.25rem;
+    left: 1.25rem;
+    right: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 10;
+}
+
+.badge {
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius-pill);
+    font-size: 0.85rem;
     font-weight: 600;
+    color: var(--text-inverse);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: var(--shadow-md);
+}
+
+.badge-sell {
     background-color: var(--status-sold);
 }
 
-.property-overlay .property-overlay-icons {
+.badge-rent {
+    background-color: var(--status-available);
+}
+
+.property-actions {
     display: flex;
-    gap: 10px;
+    gap: 0.5rem;
 }
 
-.property-overlay .property-overlay-icons span {
-    background-color: rgba(0, 0, 0, 0.538);
-    padding: 10px;
-    border-radius: 20px;
-    font-size: 20px;
-    color: var(--primary-light);
-    display: none;
+.action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    color: var(--text-heading);
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-fast);
+    opacity: 0;
+    transform: translateX(10px);
 }
 
-.property-card:hover .property-overlay-icons span {
-    display: block;
+.action-btn .material-icons {
+    font-size: 1.25rem;
 }
 
-.property-card-content {
+.action-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--text-inverse);
+}
+
+.property-card:hover .action-btn {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.property-card:hover .action-btn:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+.property-card:hover .action-btn:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.property-content {
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    padding: 10px;
-    align-items: start;
-    gap: 15px;
-    width: 100%;
+    flex-grow: 1;
 }
 
-.property-name {
-    font-size: 20px;
-    font-weight: 600;
+.property-price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 0.75rem;
 }
 
-.property-card-content .material-icons {
+.price-value {
+    display: flex;
+    align-items: center;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
     color: var(--primary-color);
 }
 
-.property-loc {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    justify-content: start;
-    align-items: center;
+.price-value .material-icons {
+    font-size: 1.5rem;
 }
 
-.property-loc h3 {
-    font-weight: 400;
+.price-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
 }
 
-.property-spez {
+.property-title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--text-heading);
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.4;
+}
+
+.property-location {
     display: flex;
-    gap: 20px;
+    align-items: flex-start;
+    gap: 0.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.property-location .material-icons {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-top: 0.1rem;
+}
+
+.property-location p {
+    font-size: 0.95rem;
+    color: var(--text-body);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.property-specs {
+    display: flex;
     justify-content: space-between;
-    width: 100%;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border-light);
+    margin-bottom: 1.5rem;
 }
 
-.property-stats {
-    display: flex;
-    gap: 15px;
-}
-
-.property-btn {
+.spec-item {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 0.5rem;
+    color: var(--text-heading);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.spec-item .material-icons {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+}
+
+.property-footer {
+    margin-top: auto;
+}
+
+.btn-primary.full-width {
     width: 100%;
-}
-
-.property-btn h3 {
-    display: flex;
-    align-items: center;
-    gap: 2px;
-}
-
-.property-btn .btn-secondary {
-    background-color: var(--bg-alt);
-    padding: 14px;
-}
-
-.btn-secondary:hover {
-    background-color: var(--primary-color);
-    color: var(--primary-light);
-    border-radius: 20px;
+    text-align: center;
+    display: block;
+    padding: 0.875rem;
 }
 
 @media (max-width:768px) {
@@ -179,8 +247,9 @@
 }
 
 .premium-properties {
-    padding: 5rem 0;
+    padding: 5rem 20px;
     background: linear-gradient(135deg, var(--bg-main) 0%, var(--bg-alt) 100%);
+    border-radius: 20px;
 }
 
 .premium-badge {
@@ -198,7 +267,7 @@
 
 .premium-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     margin-top: 3rem;
 }

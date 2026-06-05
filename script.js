@@ -1,3 +1,14 @@
+document.addEventListener('DOMContentLoaded', function () {
+    AOS.init({
+        duration: 1200,
+        easing: 'ease-out-cubic',
+        once: true,
+        offset: 80,
+        delay: 50,
+        disable: 'mobile',
+        mirror: false
+    });
+});
 document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
     initHeaderScroll();
@@ -278,8 +289,8 @@ function initSectionHeaderAnimations() {
     const sectionHeaders = document.querySelectorAll('.section-header');
 
     sectionHeaders.forEach((header) => {
-        const sectionHead = header.querySelector('.section-head, .subtitle-gold');
-        const sectionSubhead = header.querySelector('.section-subhead, h2');
+        const sectionHead = header.querySelector('.section-head, .eyebrow-badge');
+        const sectionSubhead = header.querySelector('.section-subhead');
 
         const tl = gsap.timeline({
             scrollTrigger: {
@@ -288,70 +299,73 @@ function initSectionHeaderAnimations() {
                 toggleActions: "play none none reverse"
             }
         });
-
         if (sectionHead) {
-            tl.fromTo(sectionHead,
-                {
-                    y: 30,
-                    opacity: 0,
-                    clipPath: "inset(0 100% 0 0)"
-                },
-                {
-                    y: 0,
-                    opacity: 1,
-                    clipPath: "inset(0 0% 0 0)",
-                    duration: 0.6,
-                    ease: "power3.out"
-                }
+            // Wrap the text in an overflow:hidden container on the fly
+            const text = sectionHead.innerHTML;
+            sectionHead.innerHTML = `<div style="overflow: hidden; display: inline-block;"><div class="mask-inner">${text}</div></div>`;
+            const inner = sectionHead.querySelector('.mask-inner');
+
+            tl.fromTo(inner,
+                { yPercent: 110, skewY: 5 },
+                { yPercent: 0, skewY: 0, duration: 0.7, ease: "expo.out" }
             );
         }
 
         if (sectionSubhead) {
-            const words = sectionSubhead.textContent.split(' ');
-            sectionSubhead.innerHTML = words.map(word =>
-                `<span class="word" style="display: inline-block; overflow: hidden; margin-right: 0.25em;">
-                    <span class="word-inner" style="display: inline-block;">${word}</span>
-                 </span>`
-            ).join('');
+            // 1. Add perspective to the parent to enable 3D rendering
+            gsap.set(sectionSubhead, { perspective: 400 });
+
+            // 2. Safer manual split logic
+            const words = sectionSubhead.innerText.split(' ');
+            sectionSubhead.innerHTML = '';
+
+            words.forEach(word => {
+                if (word.trim() !== '') {
+                    // Added vertical-align to keep baselines even
+                    sectionSubhead.innerHTML += `<span style="display:inline-block; overflow:hidden; vertical-align:top; margin-right:0.25em;"><span class="word-inner" style="display:inline-block;">${word}</span></span>`;
+                }
+            });
 
             const wordInners = sectionSubhead.querySelectorAll('.word-inner');
 
+            // 3. Animate with transformOrigin
             tl.fromTo(wordInners,
                 {
                     y: 50,
                     opacity: 0,
-                    rotateX: -90
+                    rotateX: -90,
+                    transformOrigin: "50% 100%" // Hinges from the bottom
                 },
                 {
                     y: 0,
                     opacity: 1,
                     rotateX: 0,
-                    duration: 0.8,
-                    stagger: 0.08,
-                    ease: "power3.out"
+                    duration: 0.4,
+                    stagger: 0.09, // Sped up the stagger slightly for a smoother wave
+                    ease: "back.out(1.2)" // Adds a tiny, premium bounce at the end
                 },
-                "-=0.3"
+                "-=0.5" // Overlap with the header animation
             );
         }
     });
-
-    gsap.utils.toArray('[data-aos="fade-up"]').forEach((element) => {
-        gsap.fromTo(element,
-            { y: 40, opacity: 0 },
-            {
-                scrollTrigger: {
-                    trigger: element,
-                    start: "top 85%",
-                    toggleActions: "play none none reverse"
-                },
-                y: 0,
-                opacity: 1,
-                duration: 0.6,
-                ease: "power2.out"
-            }
-        );
-    });
 }
+
+gsap.utils.toArray('[data-aos="fade-up"]').forEach((element) => {
+    gsap.fromTo(element,
+        { y: 40, opacity: 0 },
+        {
+            scrollTrigger: {
+                trigger: element,
+                start: "top 85%",
+                toggleActions: "play none none reverse"
+            },
+            y: 0,
+            opacity: 1,
+            duration: 0.6,
+            ease: "power2.out"
+        }
+    );
+});
 
 let resizeTimer;
 window.addEventListener('resize', () => {

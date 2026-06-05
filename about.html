@@ -15,6 +15,7 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Space+Grotesk:wght@600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
@@ -81,7 +82,7 @@
                 </p>
             </div>
 
-            <div class="story-images" data-aos="fade-left">
+            <div class="story-images" data-aos="fade-up">
                 <img src="./assets/property4.webp" alt="Stackly Founders" class="story-img-main" loading="lazy">
                 <img src="./assets/featured1.webp" alt="Luxury Interior" class="story-img-overlap" loading="lazy">
                 <div class="story-accent-box"></div>
@@ -94,25 +95,25 @@
         <div class="container">
             <div class="stats-grid">
 
-                <div class="stat-box">
+                <div class="stat-box" data-aos="flip-up" data-aos-delay="200">
                     <span class="material-icons">domain</span>
                     <h3 class="stat-number">15+</h3>
                     <p class="stat-label">Years of Experience</p>
                 </div>
 
-                <div class="stat-box">
+                <div class="stat-box" data-aos="flip-up" data-aos-delay="300">
                     <span class="material-icons">real_estate_agent</span>
                     <h3 class="stat-number">120+</h3>
                     <p class="stat-label">Licensed Agents</p>
                 </div>
 
-                <div class="stat-box">
+                <div class="stat-box" data-aos="flip-down" data-aos-delay="400">
                     <span class="material-icons">handshake</span>
                     <h3 class="stat-number">5,000+</h3>
                     <p class="stat-label">Properties Sold</p>
                 </div>
 
-                <div class="stat-box">
+                <div class="stat-box" data-aos="flip-down" data-aos-delay="500">
                     <span class="material-icons">payments</span>
                     <h3 class="stat-number">$2B+</h3>
                     <p class="stat-label">Total Sales Volume</p>
@@ -121,103 +122,148 @@
             </div>
         </div>
     </section>
-    <section class="why-choose-section">
+
+    <section class="why-choose">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header centered">
+                <span class="eyebrow-badge">Our Features</span>
                 <h2 class="section-head">Why Choose Stackly?</h2>
-                <div class="section-subhead">Our Features</div>
+                <p class="section-subhead">We redefine the real estate experience with uncompromising quality and
+                    absolute transparency.</p>
             </div>
-            <div class="why-grid">
-                <div class="why-card">
-                    <div class="why-icon"><span class="material-icons">monetization_on</span></div>
-                    <h3>Transparent Pricing</h3>
-                    <p>No hidden fees or surprise charges. We believe in complete financial transparency from day one.
+
+            <div class="features-grid">
+                <article class="feature-card" data-aos="flip-down" data-aos-delay="200">
+                    <div class="feature-icon-wrapper">
+                        <span class="material-icons">monetization_on</span>
+                    </div>
+                    <h3 class="feature-title">Transparent Pricing</h3>
+                    <p class="feature-desc">
+                        No hidden fees or surprise charges. We believe in complete financial transparency from day one.
                     </p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon"><span class="material-icons">verified_user</span></div>
-                    <h3>Trusted Agents</h3>
-                    <p>Our vetted professionals negotiate the best deals and guide you through every legal step.</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon"><span class="material-icons">location_city</span></div>
-                    <h3>Prime Locations</h3>
-                    <p>Exclusive access to the most sought-after neighborhoods and off-market luxury properties.</p>
-                </div>
+                </article>
+
+                <article class="feature-card" data-aos="flip-up" data-aos-delay="300">
+                    <div class="feature-icon-wrapper">
+                        <span class="material-icons">verified_user</span>
+                    </div>
+                    <h3 class="feature-title">Trusted Agents</h3>
+                    <p class="feature-desc">
+                        Our vetted professionals negotiate the best deals and seamlessly guide you through every legal
+                        step.
+                    </p>
+                </article>
+
+                <article class="feature-card" data-aos="flip-down" data-aos-delay="400">
+                    <div class="feature-icon-wrapper">
+                        <span class="material-icons">location_city</span>
+                    </div>
+                    <h3 class="feature-title">Prime Locations</h3>
+                    <p class="feature-desc">
+                        Get exclusive, early access to the most sought-after neighborhoods and off-market luxury
+                        properties.
+                    </p>
+                </article>
             </div>
         </div>
     </section>
-    <section class="rich-testimonials container">
-        <div class="section-header">
-            <div class="section-head">Success Stories</div>
-            <h2 class="section-subhead">Real Results from Real Clients</h2>
-        </div>
-
-        <div class="testimonials-dual-layout">
-
-            <div class="featured-testimonial">
-                <div class="featured-testi-img">
-                    <img src="./assets/property1.webp" alt="Client Property" loading="lazy">
-                    <div class="testi-badge"><span class="material-icons">check_circle</span> Verified Buyer</div>
-                </div>
-                <div class="featured-testi-content">
-                    <div class="testi-stars">★★★★★</div>
-                    <h3 class="testi-headline">"They found us our dream off-market home."</h3>
-                    <p class="testi-body">
-                        "Navigating the competitive downtown market felt impossible until we partnered with Stackly.
-                        Their agents leveraged their local network to find us a stunning modern loft before it even hit
-                        the market. The negotiation process was transparent, and they secured the home under our target
-                        budget."
-                    </p>
-                    <div class="testi-client-meta">
-                        <img src="./assets/team1.webp" alt="Sarah Jenkins" class="client-avatar-lg">
-                        <div class="client-details">
-                            <h4>Sarah & Mark Jenkins</h4>
-                            <p>Purchased a 3-Bed Loft in Downtown UAE</p>
-                        </div>
-                    </div>
-                </div>
+    <section class="rich-testimonials single-slider">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="eyebrow-badge">Success Stories</span>
+                <h2 class="section-head">Real Results from Real Clients</h2>
             </div>
 
-            <div class="testimonial-stack">
-
-                <div class="stack-card">
-                    <div class="stack-card-header">
-                        <img src="./assets/review3.webp" alt="Michael" class="client-avatar-sm">
-                        <div class="client-details">
-                            <h4>Michael Chen</h4>
-                            <p class="transaction-type">Sold in Suburban USA</p>
+            <div class="slider-wrapper">
+                <div class="testimonial-track" id="testiTrack">
+                    <article class="slider-card">
+                        <div class="slider-img">
+                            <img src="./assets/property1.webp" alt="Client Property" loading="lazy">
+                            <div class="testi-badge">
+                                <span class="material-icons">check_circle</span> Verified Buyer
+                            </div>
                         </div>
-                        <div class="testi-stars-sm">★★★★★</div>
-                    </div>
-                    <p class="stack-card-body">"The marketing strategy for our property was exceptional. We received
-                        three offers over asking price within the first 48 hours of listing."</p>
+                        <div class="slider-content">
+                            <div class="quote-mark">“</div>
+                            <div class="testi-stars">★★★★★</div>
+                            <h3 class="testi-headline">"They found us our dream off-market home."</h3>
+                            <p class="testi-body">
+                                "Navigating the competitive downtown market felt impossible until we partnered with
+                                Stackly.
+                                Their agents leveraged their local network to find us a stunning modern loft before it
+                                even hit
+                                the market. They secured the home under our target budget."
+                            </p>
+                            <div class="testi-client-meta">
+                                <img src="./assets/team1.webp" alt="Sarah Jenkins" class="client-avatar">
+                                <div class="client-details">
+                                    <h4>Sarah & Mark Jenkins</h4>
+                                    <p>Purchased a 3-Bed Loft Downtown</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="slider-card">
+                        <div class="slider-img">
+                            <img src="./assets/featured2.webp" alt="Suburban Property" loading="lazy">
+                            <div class="testi-badge">
+                                <span class="material-icons">trending_up</span> Top ROI
+                            </div>
+                        </div>
+                        <div class="slider-content">
+                            <div class="quote-mark">“</div>
+                            <div class="testi-stars">★★★★★</div>
+                            <h3 class="testi-headline">"Three offers over asking within 48 hours."</h3>
+                            <p class="testi-body">
+                                "The marketing strategy for our property was exceptional. Stackly's media team
+                                presented our home beautifully, creating an instant bidding war. The entire
+                                selling process was seamless and incredibly profitable."
+                            </p>
+                            <div class="testi-client-meta">
+                                <img src="./assets/review3.webp" alt="Michael Chen" class="client-avatar">
+                                <div class="client-details">
+                                    <h4>Michael Chen</h4>
+                                    <p class="transaction-type">Sold in Suburban Area</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="slider-card">
+                        <div class="slider-img">
+                            <img src="./assets/featured1.webp" alt="Downtown Penthouse" loading="lazy">
+                            <div class="testi-badge">
+                                <span class="material-icons">vpn_key</span> Leased Fast
+                            </div>
+                        </div>
+                        <div class="slider-content">
+                            <div class="quote-mark">“</div>
+                            <div class="testi-stars">★★★★★</div>
+                            <h3 class="testi-headline">"Perfectly handled my international relocation."</h3>
+                            <p class="testi-body">
+                                "Relocating internationally was stressful, but their leasing team handled
+                                all the paperwork and found an apartment perfectly close to my new office.
+                                I literally just had to pick up the keys."
+                            </p>
+                            <div class="testi-client-meta">
+                                <img src="./assets/review1.webp" alt="Elena Rodriguez" class="client-avatar">
+                                <div class="client-details">
+                                    <h4>Elena Rodriguez</h4>
+                                    <p class="transaction-type">Rented Downtown Penthouse</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
                 </div>
-
-                <div class="stack-card">
-                    <div class="stack-card-header">
-                        <img src="./assets/review1.webp" alt="Elena" class="client-avatar-sm">
-                        <div class="client-details">
-                            <h4>Elena Rodriguez</h4>
-                            <p class="transaction-type">Rented in UAE</p>
-                        </div>
-                        <div class="testi-stars-sm">★★★★★</div>
+                <div class="slider-controls">
+                    <button class="nav-btn" id="prevBtn" aria-label="Previous Review">
+                        <span class="material-icons">arrow_back</span>
+                    </button>
+                    <div class="slider-dots" id="sliderDots">
                     </div>
-                    <p class="stack-card-body">"Relocating internationally was stressful, but their leasing team handled
-                        all the paperwork and found an apartment perfectly close to my new office."</p>
-                </div>
-
-                <div class="stack-card">
-                    <div class="stack-card-header">
-                        <img src="./assets/review5.webp" alt="David" class="client-avatar-sm">
-                        <div class="client-details">
-                            <h4>David Althaus</h4>
-                            <p class="transaction-type">Investment Property</p>
-                        </div>
-                        <div class="testi-stars-sm">★★★★★</div>
-                    </div>
-                    <p class="stack-card-body">"Stackly's ROI analysis on multi-family units is unmatched. They helped
-                        me secure a duplex that was cash-flow positive from month one."</p>
+                    <button class="nav-btn" id="nextBtn" aria-label="Next Review">
+                        <span class="material-icons">arrow_forward</span>
+                    </button>
                 </div>
 
             </div>
@@ -240,7 +286,7 @@
         <div class="container">
             <div class="footer-grid">
 
-                <div class="footer-col brand-col">
+                <div class="footer-col brand-col" data-aos="fade-up" data-aos-delay="100">
                     <img src="./assets/stackly-logo.webp" alt="LOGO" class="logo">
                     <p class="footer-desc">
                         Your trusted partner in navigating the real estate market. We make buying, selling, and renting
@@ -248,7 +294,7 @@
                     </p>
                 </div>
 
-                <div class="footer-col links-col">
+                <div class="footer-col links-col" data-aos="fade-up" data-aos-delay="200">
                     <h3>Pages</h3>
                     <ul>
                         <li><a href="index.html">Home</a></li>
@@ -258,7 +304,7 @@
                         <li><a href="dashboard.html">Dashboard</a></li>
                     </ul>
                 </div>
-                <div class="footer-col links-col">
+                <div class="footer-col links-col" data-aos="fade-up" data-aos-delay="300">
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="404page.html">Properties for Sale</a></li>
@@ -268,7 +314,7 @@
                     </ul>
                 </div>
 
-                <div class="footer-col contact-col">
+                <div class="footer-col contact-col" data-aos="fade-up" data-aos-delay="400">
                     <h3>Contact Us</h3>
                     <ul class="contact-list">
                         <li>
@@ -303,7 +349,54 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
     <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const track = document.getElementById('testiTrack');
+            const slides = document.querySelectorAll('.slider-card');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const dotsContainer = document.getElementById('sliderDots');
+
+            let currentIndex = 0;
+            const totalSlides = slides.length;
+
+            slides.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                if (index === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => goToSlide(index));
+                dotsContainer.appendChild(dot);
+            });
+
+            const dots = document.querySelectorAll('.dot');
+
+            function updateUI() {
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+                dots.forEach(dot => dot.classList.remove('active'));
+                dots[currentIndex].classList.add('active');
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex === totalSlides - 1) ? 0 : currentIndex + 1;
+                updateUI();
+            }
+
+            function prevSlide() {
+                currentIndex = (currentIndex === 0) ? totalSlides - 1 : currentIndex - 1;
+                updateUI();
+            }
+
+            function goToSlide(index) {
+                currentIndex = index;
+                updateUI();
+            }
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+        });
+    </script>
 </body>
 
 </html>

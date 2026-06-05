@@ -15,6 +15,7 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Space+Grotesk:wght@600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
@@ -58,255 +59,284 @@
         </div>
     </section>
     <section class="property container">
-        <div class="section-header">
-            <div class="section-head">Properties</div>
-            <h1 class="section-subhead">Elevated Living, Simplified Search.</h1>
-        </div>
-        <div class="property-container">
-            <div class="property-card">
-                <div class="property-img">
-                    <img src="./assets/property1.webp" alt="Property" loading="lazy">
-                    <div class="property-overlay">
-                        <span class="prop-over-g">For Sell</span>
-                        <div class="property-overlay-icons">
-                            <a href="404page.html"> <span class="material-icons">add</span></a>
-                            <a href="404page.html"> <span class="material-icons">favorite</span></a>
-                        </div>
-                    </div>
+        <div class="properties-section">
+            <div class="container">
+                <div class="section-header centered" data-aos="fade-up">
+                    <h2 class="section-head">Latest Properties</h2>
+                    <p class="section-subhead">Explore our exclusive collection of properties across India.</p>
                 </div>
-                <div class="property-card-content">
 
-                    <div class="property-name">Luxury Villa in Bandra, Mumbai, Maharashtra</div>
-                    <div class="property-loc">
-                        <span class="material-icons">location_on</span>
-                        <h3> Bandra Reclamation, Mumbai, Maharashtra 400050</h3>
-                    </div>
-                    <div class="property-spez">
-                        <div class="property-stats">
-                            <span class="material-icons">bed</span>
-                            <h4>4 Bed</h4>
+                <div class="property-grid">
+                    <article class="property-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="property-img-wrapper">
+                            <img src="./assets/property1.webp" alt="Luxury Villa in Bandra" loading="lazy">
+                            <div class="property-overlay-top">
+                                <span class="badge badge-sell">For Sale</span>
+                                <div class="property-actions">
+                                    <a href="404page.html" class="action-btn" aria-label="Add to compare">
+                                        <span class="material-icons">add</span>
+                                    </a>
+                                    <a href="404page.html" class="action-btn" aria-label="Save to favorites">
+                                        <span class="material-icons">favorite_border</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="property-stats">
-                            <span class="material-icons">bathtub</span>
-                            <h4>3 Bath</h4>
+                        <div class="property-content">
+                            <div class="property-price-row">
+                                <span class="price-value"><span
+                                        class="material-icons">currency_rupee</span>2,50,00,000</span>
+                                <span class="price-label">Estimated</span>
+                            </div>
+                            <h3 class="property-title">Luxury Villa in Bandra</h3>
+                            <div class="property-location">
+                                <span class="material-icons">location_on</span>
+                                <p>Bandra Reclamation, Mumbai, MH 400050</p>
+                            </div>
+                            <div class="property-specs">
+                                <div class="spec-item">
+                                    <span class="material-icons">bed</span>
+                                    <span>4 Bed</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="material-icons">bathtub</span>
+                                    <span>3 Bath</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="material-icons">square_foot</span>
+                                    <span>2500 Sqft</span>
+                                </div>
+                            </div>
+                            <div class="property-footer">
+                                <a href="404page.html" class="btn-primary full-width">View Details</a>
+                            </div>
                         </div>
-                        <div class="property-stats">
-                            <span class="material-icons">square_foot</span>
-                            <h4>2500 Sqft</h4>
+                    </article>
+                    <article class="property-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="property-img-wrapper">
+                            <img src="./assets/property2.webp" alt="Modern Apartment in Connaught Place" loading="lazy">
+                            <div class="property-overlay-top">
+                                <span class="badge badge-rent">For Rent</span>
+                                <div class="property-actions">
+                                    <a href="404page.html" class="action-btn" aria-label="Add to compare">
+                                        <span class="material-icons">add</span>
+                                    </a>
+                                    <a href="404page.html" class="action-btn" aria-label="Save to favorites">
+                                        <span class="material-icons">favorite_border</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="property-btn">
-                        <a href="404page.html" class="btn-secondary">View Details</a>
-                        <h3>
-                            <span class="material-icons">currency_rupee</span>
-                            2,50,00,000
-                        </h3>
-                    </div>
-                </div>
-            </div>
-            <div class="property-card">
-                <div class="property-img">
-                    <img src="./assets/property2.webp" alt="Property" loading="lazy">
-                    <div class="property-overlay">
-                        <span class="prop-over-r">For Rent</span>
-                        <div class="property-overlay-icons">
-                            <a href="404page.html"> <span class="material-icons">add</span></a>
-                            <a href="404page.html"> <span class="material-icons">favorite</span></a>
+                        <div class="property-content">
+                            <div class="property-price-row">
+                                <span class="price-value"><span
+                                        class="material-icons">currency_rupee</span>75,000<small>/mo</small></span>
+                                <span class="price-label">Listed Price</span>
+                            </div>
+                            <h3 class="property-title">Modern Apartment in CP</h3>
+                            <div class="property-location">
+                                <span class="material-icons">location_on</span>
+                                <p>Connaught Place, New Delhi, DL 110001</p>
+                            </div>
+                            <div class="property-specs">
+                                <div class="spec-item">
+                                    <span class="material-icons">bed</span>
+                                    <span>3 Bed</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="material-icons">bathtub</span>
+                                    <span>2 Bath</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="material-icons">square_foot</span>
+                                    <span>1800 Sqft</span>
+                                </div>
+                            </div>
+                            <div class="property-footer">
+                                <a href="404page.html" class="btn-primary full-width">View Details</a>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="property-card-content">
-
-                    <div class="property-name">Modern Apartment in Connaught Place, Delhi</div>
-                    <div class="property-loc">
-                        <span class="material-icons">location_on</span>
-                        <h3> Connaught Place, New Delhi, Delhi 110001</h3>
-                    </div>
-                    <div class="property-spez">
-                        <div class="property-stats">
-                            <span class="material-icons">bed</span>
-                            <h4>3 Bed</h4>
+                    </article>
+                    <article class="property-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="property-img-wrapper">
+                            <img src="./assets/property3.webp" alt="Spacious House in Koramangala" loading="lazy">
+                            <div class="property-overlay-top">
+                                <span class="badge badge-sell">For Sale</span>
+                                <div class="property-actions">
+                                    <a href="404page.html" class="action-btn" aria-label="Add to compare">
+                                        <span class="material-icons">add</span>
+                                    </a>
+                                    <a href="404page.html" class="action-btn" aria-label="Save to favorites">
+                                        <span class="material-icons">favorite_border</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="property-stats">
-                            <span class="material-icons">bathtub</span>
-                            <h4>2 Bath</h4>
+                        <div class="property-content">
+                            <div class="property-price-row">
+                                <span class="price-value"><span
+                                        class="material-icons">currency_rupee</span>3,20,00,000</span>
+                                <span class="price-label">Estimated</span>
+                            </div>
+                            <h3 class="property-title">Spacious House Koramangala</h3>
+                            <div class="property-location">
+                                <span class="material-icons">location_on</span>
+                                <p>4th Block, Bangalore, KA 560034</p>
+                            </div>
+                            <div class="property-specs">
+                                <div class="spec-item">
+                                    <span class="material-icons">bed</span>
+                                    <span>5 Bed</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="material-icons">bathtub</span>
+                                    <span>4 Bath</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="material-icons">square_foot</span>
+                                    <span>3200 Sqft</span>
+                                </div>
+                            </div>
+                            <div class="property-footer">
+                                <a href="404page.html" class="btn-primary full-width">View Details</a>
+                            </div>
                         </div>
-                        <div class="property-stats">
-                            <span class="material-icons">square_foot</span>
-                            <h4>1800 Sqft</h4>
+                    </article>
+                    <article class="property-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="property-img-wrapper">
+                            <img src="./assets/property4.webp" alt="Elegant Flat in T. Nagar" loading="lazy">
+                            <div class="property-overlay-top">
+                                <span class="badge badge-rent">For Rent</span>
+                                <div class="property-actions">
+                                    <a href="404page.html" class="action-btn" aria-label="Add to compare">
+                                        <span class="material-icons">add</span>
+                                    </a>
+                                    <a href="404page.html" class="action-btn" aria-label="Save to favorites">
+                                        <span class="material-icons">favorite_border</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="property-btn">
-                        <a href="404page.html" class="btn-secondary">View Details</a>
-                        <h3>
-                            <span class="material-icons">currency_rupee</span>
-                            75,000
-                        </h3>
-                    </div>
-                </div>
-            </div>
-            <div class="property-card">
-                <div class="property-img">
-                    <img src="./assets/property3.webp" alt="Property" loading="lazy">
-                    <div class="property-overlay">
-                        <span class="prop-over-g">For Sell</span>
-                        <div class="property-overlay-icons">
-                            <a href="404page.html"> <span class="material-icons">add</span></a>
-                            <a href="404page.html"> <span class="material-icons">favorite</span></a>
+                        <div class="property-content">
+                            <div class="property-price-row">
+                                <span class="price-value"><span
+                                        class="material-icons">currency_rupee</span>45,000<small>/mo</small></span>
+                                <span class="price-label">Listed Price</span>
+                            </div>
+                            <h3 class="property-title">Elegant Flat in T. Nagar</h3>
+                            <div class="property-location">
+                                <span class="material-icons">location_on</span>
+                                <p>T. Nagar, Chennai, TN 600017</p>
+                            </div>
+                            <div class="property-specs">
+                                <div class="spec-item">
+                                    <span class="material-icons">bed</span>
+                                    <span>2 Bed</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="material-icons">bathtub</span>
+                                    <span>2 Bath</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="material-icons">square_foot</span>
+                                    <span>1200 Sqft</span>
+                                </div>
+                            </div>
+                            <div class="property-footer">
+                                <a href="404page.html" class="btn-primary full-width">View Details</a>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="property-card-content">
-
-                    <div class="property-name">Spacious House in Koramangala, Bangalore, Karnataka</div>
-                    <div class="property-loc">
-                        <span class="material-icons">location_on</span>
-                        <h3> Koramangala 4th Block, Bangalore, Karnataka 560034</h3>
-                    </div>
-                    <div class="property-spez">
-                        <div class="property-stats">
-                            <span class="material-icons">bed</span>
-                            <h4>5 Bed</h4>
+                    </article>
+                    <article class="property-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="property-img-wrapper">
+                            <img src="./assets/property5.webp" alt="Bungalow in Salt Lake City" loading="lazy">
+                            <div class="property-overlay-top">
+                                <span class="badge badge-sell">For Sale</span>
+                                <div class="property-actions">
+                                    <a href="404page.html" class="action-btn" aria-label="Add to compare">
+                                        <span class="material-icons">add</span>
+                                    </a>
+                                    <a href="404page.html" class="action-btn" aria-label="Save to favorites">
+                                        <span class="material-icons">favorite_border</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="property-stats">
-                            <span class="material-icons">bathtub</span>
-                            <h4>4 Bath</h4>
+                        <div class="property-content">
+                            <div class="property-price-row">
+                                <span class="price-value"><span
+                                        class="material-icons">currency_rupee</span>4,50,00,000</span>
+                                <span class="price-label">Estimated</span>
+                            </div>
+                            <h3 class="property-title">Bungalow in Salt Lake City</h3>
+                            <div class="property-location">
+                                <span class="material-icons">location_on</span>
+                                <p>Salt Lake City, Kolkata, WB 700091</p>
+                            </div>
+                            <div class="property-specs">
+                                <div class="spec-item">
+                                    <span class="material-icons">bed</span>
+                                    <span>6 Bed</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="material-icons">bathtub</span>
+                                    <span>5 Bath</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="material-icons">square_foot</span>
+                                    <span>4000 Sqft</span>
+                                </div>
+                            </div>
+                            <div class="property-footer">
+                                <a href="404page.html" class="btn-primary full-width">View Details</a>
+                            </div>
                         </div>
-                        <div class="property-stats">
-                            <span class="material-icons">square_foot</span>
-                            <h4>3200 Sqft</h4>
+                    </article>
+                    <article class="property-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="property-img-wrapper">
+                            <img src="./assets/property6.webp" alt="Penthouse in Jubilee Hills" loading="lazy">
+                            <div class="property-overlay-top">
+                                <span class="badge badge-rent">For Rent</span>
+                                <div class="property-actions">
+                                    <a href="404page.html" class="action-btn" aria-label="Add to compare">
+                                        <span class="material-icons">add</span>
+                                    </a>
+                                    <a href="404page.html" class="action-btn" aria-label="Save to favorites">
+                                        <span class="material-icons">favorite_border</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="property-btn">
-                        <a href="404page.html" class="btn-secondary">View Details</a>
-                        <h3>
-                            <span class="material-icons">currency_rupee</span>
-                            3,20,00,000
-                        </h3>
-                    </div>
-                </div>
-            </div>
-            <div class="property-card">
-                <div class="property-img">
-                    <img src="./assets/property4.webp" alt="Property" loading="lazy">
-                    <div class="property-overlay">
-                        <span class="prop-over-r">For Rent</span>
-                        <div class="property-overlay-icons">
-                            <a href="404page.html"> <span class="material-icons">add</span></a>
-                            <a href="404page.html"> <span class="material-icons">favorite</span></a>
+                        <div class="property-content">
+                            <div class="property-price-row">
+                                <span class="price-value"><span
+                                        class="material-icons">currency_rupee</span>1,20,000<small>/mo</small></span>
+                                <span class="price-label">Listed Price</span>
+                            </div>
+                            <h3 class="property-title">Penthouse in Jubilee Hills</h3>
+                            <div class="property-location">
+                                <span class="material-icons">location_on</span>
+                                <p>Jubilee Hills, Hyderabad, TS 500033</p>
+                            </div>
+                            <div class="property-specs">
+                                <div class="spec-item">
+                                    <span class="material-icons">bed</span>
+                                    <span>3 Bed</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="material-icons">bathtub</span>
+                                    <span>3 Bath</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="material-icons">square_foot</span>
+                                    <span>2200 Sqft</span>
+                                </div>
+                            </div>
+                            <div class="property-footer">
+                                <a href="404page.html" class="btn-primary full-width">View Details</a>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="property-card-content">
-
-                    <div class="property-name">Elegant Flat in T. Nagar, Chennai, Tamil Nadu</div>
-                    <div class="property-loc">
-                        <span class="material-icons">location_on</span>
-                        <h3> T. Nagar, Chennai, Tamil Nadu 600017</h3>
-                    </div>
-                    <div class="property-spez">
-                        <div class="property-stats">
-                            <span class="material-icons">bed</span>
-                            <h4>2 Bed</h4>
-                        </div>
-                        <div class="property-stats">
-                            <span class="material-icons">bathtub</span>
-                            <h4>2 Bath</h4>
-                        </div>
-                        <div class="property-stats">
-                            <span class="material-icons">square_foot</span>
-                            <h4>1200 Sqft</h4>
-                        </div>
-                    </div>
-                    <div class="property-btn">
-                        <a href="404page.html" class="btn-secondary">View Details</a>
-                        <h3>
-                            <span class="material-icons">currency_rupee</span>
-                            45,000
-                        </h3>
-                    </div>
-                </div>
-            </div>
-            <div class="property-card">
-                <div class="property-img">
-                    <img src="./assets/property5.webp" alt="Property" loading="lazy">
-                    <div class="property-overlay">
-                        <span class="prop-over-g">For Sell</span>
-                        <div class="property-overlay-icons">
-                            <a href="404page.html"> <span class="material-icons">add</span></a>
-                            <a href="404page.html"> <span class="material-icons">favorite</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="property-card-content">
-
-                    <div class="property-name">Bungalow in Salt Lake City, Kolkata, West Bengal</div>
-                    <div class="property-loc">
-                        <span class="material-icons">location_on</span>
-                        <h3> Salt Lake City, Kolkata, West Bengal 700091</h3>
-                    </div>
-                    <div class="property-spez">
-                        <div class="property-stats">
-                            <span class="material-icons">bed</span>
-                            <h4>6 Bed</h4>
-                        </div>
-                        <div class="property-stats">
-                            <span class="material-icons">bathtub</span>
-                            <h4>5 Bath</h4>
-                        </div>
-                        <div class="property-stats">
-                            <span class="material-icons">square_foot</span>
-                            <h4>4000 Sqft</h4>
-                        </div>
-                    </div>
-                    <div class="property-btn">
-                        <a href="404page.html" class="btn-secondary">View Details</a>
-                        <h3>
-                            <span class="material-icons">currency_rupee</span>
-                            4,50,00,000
-                        </h3>
-                    </div>
-                </div>
-            </div>
-            <div class="property-card">
-                <div class="property-img">
-                    <img src="./assets/property6.webp" alt="Property" loading="lazy">
-                    <div class="property-overlay">
-                        <span class="prop-over-r">For Rent</span>
-                        <div class="property-overlay-icons">
-                            <a href="404page.html"> <span class="material-icons" title="Add to cart">add</span></a>
-                            <a href="404page.html"> <span class="material-icons">favorite</span></a>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="property-card-content">
-                    <div class="property-name">Penthouse in Jubilee Hills, Hyderabad, Telangana</div>
-                    <div class="property-loc">
-                        <span class="material-icons">location_on</span>
-                        <h3> Jubilee Hills, Hyderabad, Telangana 500033</h3>
-                    </div>
-                    <div class="property-spez">
-                        <div class="property-stats">
-                            <span class="material-icons">bed</span>
-                            <h4>3 Bed</h4>
-                        </div>
-                        <div class="property-stats">
-                            <span class="material-icons">bathtub</span>
-                            <h4>3 Bath</h4>
-                        </div>
-                        <div class="property-stats">
-                            <span class="material-icons">square_foot</span>
-                            <h4>2200 Sqft</h4>
-                        </div>
-                    </div>
-                    <div class="property-btn">
-                        <a href="404page.html" class="btn-secondary">View Details</a>
-                        <h3>
-                            <span class="material-icons">currency_rupee</span>
-                            1,20,000
-                        </h3>
-                    </div>
+                    </article>
                 </div>
             </div>
         </div>
@@ -317,7 +347,7 @@
             <h1 class="section-subhead">Exclusive Listings, Unmatched Luxury.</h1>
         </div>
         <div class="premium-container">
-            <div class="premium-card">
+            <div class="premium-card" data-aos="flip-up" data-aos-delay="100">
                 <div class="premium-img">
                     <img src="./assets/property2.webp" alt="Premium Property" loading="lazy">
                     <div class="premium-overlay">
@@ -363,7 +393,7 @@
                 </div>
             </div>
 
-            <div class="premium-card featured">
+            <div class="premium-card featured" data-aos="flip-down" data-aos-delay="200">
                 <div class="premium-img">
                     <img src="./assets/property4.webp" alt="Premium Property" loading="lazy">
                     <div class="premium-overlay">
@@ -409,7 +439,7 @@
                 </div>
             </div>
 
-            <div class="premium-card">
+            <div class="premium-card" data-aos="flip-up" data-aos-delay="300">
                 <div class="premium-img">
                     <img src="./assets/property6.webp" alt="Premium Property" loading="lazy">
                     <div class="premium-overlay">
@@ -464,7 +494,7 @@
             </div>
 
             <div class="agents-grid">
-                <div class="agent-card">
+                <div class="agent-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="agent-img-wrapper">
                         <img src="./assets/review1.webp" alt="Agent Name" loading="lazy">
                         <div class="agent-socials">
@@ -479,7 +509,7 @@
                     </div>
                 </div>
 
-                <div class="agent-card">
+                <div class="agent-card" data-aos="fade-down" data-aos-delay="200">
                     <div class="agent-img-wrapper">
                         <img src="./assets/review3.webp" alt="Agent Name" loading="lazy">
                         <div class="agent-socials">
@@ -494,7 +524,7 @@
                     </div>
                 </div>
 
-                <div class="agent-card">
+                <div class="agent-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="agent-img-wrapper">
                         <img src="./assets/review2.webp" alt="Agent Name" loading="lazy">
                         <div class="agent-socials">
@@ -509,7 +539,7 @@
                     </div>
                 </div>
 
-                <div class="agent-card">
+                <div class="agent-card" data-aos="fade-down" data-aos-delay="400">
                     <div class="agent-img-wrapper">
                         <img src="./assets/review4.webp" alt="Agent Name" loading="lazy">
                         <div class="agent-socials">
@@ -535,19 +565,20 @@
             </div>
 
             <div class="faq-accordion">
-                <div class="faq-item">
+                <div class="faq-item" data-aos="fade-up">
                     <button class="faq-question">
                         What is the process of buying a property through Stackly?
                         <span class="material-icons icon-toggle">expand_more</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Our process is streamlined for your convenience. It starts with a consultation to understand
+                        <p>Our process is streamlined for your convenience. It starts with a consultation to
+                            understand
                             your needs, followed by curated property viewings, expert negotiation, and seamless
                             assistance through the closing paperwork.</p>
                     </div>
                 </div>
 
-                <div class="faq-item">
+                <div class="faq-item" data-aos="fade-up">
                     <button class="faq-question">
                         Are there any hidden fees when renting?
                         <span class="material-icons icon-toggle">expand_more</span>
@@ -559,30 +590,33 @@
                     </div>
                 </div>
 
-                <div class="faq-item">
+                <div class="faq-item" data-aos="fade-up">
                     <button class="faq-question">
                         Do you offer property management services?
                         <span class="material-icons icon-toggle">expand_more</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes, we offer comprehensive property management for landlords and investors, including tenant
-                            screening, rent collection, and 24/7 maintenance support to ensure your asset is protected.
+                        <p>Yes, we offer comprehensive property management for landlords and investors, including
+                            tenant
+                            screening, rent collection, and 24/7 maintenance support to ensure your asset is
+                            protected.
                         </p>
                     </div>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item" data-aos="fade-up">
                     <button class="faq-question">
                         What is the process of buying a property through Stackly?
                         <span class="material-icons icon-toggle">expand_more</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Our process is streamlined for your convenience. It starts with a consultation to understand
+                        <p>Our process is streamlined for your convenience. It starts with a consultation to
+                            understand
                             your needs, followed by curated property viewings, expert negotiation, and seamless
                             assistance through the closing paperwork.</p>
                     </div>
                 </div>
 
-                <div class="faq-item">
+                <div class="faq-item" data-aos="fade-up">
                     <button class="faq-question">
                         Are there any hidden fees when renting?
                         <span class="material-icons icon-toggle">expand_more</span>
@@ -594,14 +628,16 @@
                     </div>
                 </div>
 
-                <div class="faq-item">
+                <div class="faq-item" data-aos="fade-up">
                     <button class="faq-question">
                         Do you offer property management services?
                         <span class="material-icons icon-toggle">expand_more</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes, we offer comprehensive property management for landlords and investors, including tenant
-                            screening, rent collection, and 24/7 maintenance support to ensure your asset is protected.
+                        <p>Yes, we offer comprehensive property management for landlords and investors, including
+                            tenant
+                            screening, rent collection, and 24/7 maintenance support to ensure your asset is
+                            protected.
                         </p>
                     </div>
                 </div>
@@ -626,15 +662,16 @@
         <div class="container">
             <div class="footer-grid">
 
-                <div class="footer-col brand-col">
+                <div class="footer-col brand-col" data-aos="fade-up" data-aos-delay="100">
                     <img src="./assets/stackly-logo.webp" alt="LOGO" class="logo">
                     <p class="footer-desc">
-                        Your trusted partner in navigating the real estate market. We make buying, selling, and renting
+                        Your trusted partner in navigating the real estate market. We make buying, selling, and
+                        renting
                         properties simple, transparent, and enjoyable.
                     </p>
                 </div>
 
-                <div class="footer-col links-col">
+                <div class="footer-col links-col" data-aos="fade-up" data-aos-delay="200">
                     <h3>Pages</h3>
                     <ul>
                         <li><a href="index.html">Home</a></li>
@@ -644,7 +681,7 @@
                         <li><a href="dashboard.html">Dashboard</a></li>
                     </ul>
                 </div>
-                <div class="footer-col links-col">
+                <div class="footer-col links-col" data-aos="fade-up" data-aos-delay="300">
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="404page.html">Properties for Sale</a></li>
@@ -654,7 +691,7 @@
                     </ul>
                 </div>
 
-                <div class="footer-col contact-col">
+                <div class="footer-col contact-col" data-aos="fade-up" data-aos-delay="400">
                     <h3>Contact Us</h3>
                     <ul class="contact-list">
                         <li>
@@ -689,6 +726,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
     <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 
     <script>
