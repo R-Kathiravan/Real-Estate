@@ -244,6 +244,9 @@
     .property-container {
         grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
     }
+    .property-grid{
+        grid-template-columns: 1fr;
+    }
 }
 
 .premium-properties {

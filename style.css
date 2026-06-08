@@ -719,6 +719,12 @@
         grid-column: span 1;
         grid-row: span 1;
     }
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    .featured-card-container {
+        grid-template-columns: 1fr;
+    }
 }
 
  .explore-card {
@@ -1736,6 +1742,9 @@
         opacity: 1;
         transform: none;
         max-width: 100%;
+    }
+    .features-grid{
+        grid-template-columns: 1fr;
     }
 }
 

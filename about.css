@@ -555,3 +555,8 @@
         flex-wrap: wrap;
     }
 }
+@media (max-width:478px) {
+    .features-grid{
+        grid-template-columns: 1fr;
+    }
+}
